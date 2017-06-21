@@ -1,1 +1,39 @@
-/* variables and mixins */
+
+/* breakpoints */
+$xs: 767px;
+$sm: 991px;
+$md: 1199px;
+
+/* colors */
+$white: #fff;
+$black: #000;
+$slate: #58637a;
+
+
+/* other params */
+$borderRad: 3px;
+
+/* mixins */
+@mixin fontSH($size, $height) {
+  font-size: $size;
+  line-height: $height;
+}
+
+@mixin trans($duration: 0.3s) {
+  transition: all $duration ease-in-out;
+}
+
+/* selectors gain */
+%blue-button {
+  border-radius: $borderRad;
+  background-image: linear-gradient(98deg, #008cff, #0076f5);
+  color: $white;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+}
+
+%blue-button:hover {
+  text-decoration: none;
+  color: $white;
+}
