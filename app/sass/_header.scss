@@ -1,0 +1,108 @@
+.header {
+  position: absolute;
+  top: 16px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 1440px;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  font-size: 16px;
+  letter-spacing: 0.4px;
+
+  // temp
+  background-color: lightblue;
+  height: 38px;
+
+  &__nav-wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__nav {
+    display: flex;
+    align-items: center;
+  }
+
+  &__nav-link {
+    margin-right: 45px;
+    color: $black;
+    @include trans();
+  }
+
+  &__nav-link:hover {
+    text-decoration: none;
+    color: $electric-blue;
+  }
+
+  &__btn {
+    @extend %blue-border-button;
+    @extend .wave;
+    padding: 10px 14px;
+
+    @include fontSH(16px, 16px);
+  }
+
+  &__btn:focus {
+    color: $electric-blue;
+  }
+
+  &__burger {
+    display: none;
+  }
+}
+
+@media (max-width: 1540px) {
+  .header {
+    width: 100%;
+    padding: 0 50px;
+
+  }
+}
+
+
+@media(max-width: $sm) { // <992
+  .header {
+    top: 15px;
+    padding: 0 36px 0 31px;
+
+    &__nav-wrapper {
+      display: none;
+    }
+
+    &__burger {
+      display: block;
+      width: 20px;
+      height: 14px;
+      position: relative;
+    }
+
+    &__burger-dash {
+      position: absolute;
+      width: 20px;
+      height: 2px;
+      background: $black;
+      @include trans();
+    }
+
+    &__burger-dash__top {
+      top: 0;
+    }
+
+    &__burger-dash__middle {
+      top: 6px;
+    }
+
+    &__burger-dash__bottom {
+      top: 12px;
+    }
+  }
+}
+
+@media(max-width: $xs) { // <768
+  .header {
+    padding: 0 20px;
+  }
+}
