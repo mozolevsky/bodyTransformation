@@ -112,9 +112,32 @@ $shadow: 0 15px 35px 0 rgba(0, 0, 0, 0.1), 0 5px 15px 0 rgba(0, 0, 0, 0.07);
   line-height: $height;
 }
 
-@mixin trans($duration: 0.3s) {
+@mixin trans($duration: 0.5s) {
   transition: all $duration ease-in-out;
 }
+
+@mixin borderButton($color) {
+  display: inline-block;
+  border-radius: $borderRad;
+  border: solid 1px $color;
+  background: transparent;
+
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  text-align: center;
+  color: $color;
+
+  transition: all .5s ease-in-out;
+}
+
+@mixin borderButtonHover ($color) {
+  color: $white;
+  background: $color;
+  text-decoration: none;
+}
+
 
 /* selectors gain */
 %blue-button {
@@ -131,19 +154,5 @@ $shadow: 0 15px 35px 0 rgba(0, 0, 0, 0.1), 0 5px 15px 0 rgba(0, 0, 0, 0.07);
   color: $white;
 }
 
-%blue-border-button {
-  border-radius: $borderRad;
-  border: solid 1px $electric-blue;
-  background: transparent;
 
-  font-size: 18px;
-  font-weight: bold;
-  letter-spacing: 0.5px;
-  text-align: center;
-  color: $electric-blue;
 
-}
-
-%blue-border-button:hover {
-  text-decoration: none;
-}

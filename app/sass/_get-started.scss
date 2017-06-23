@@ -14,10 +14,12 @@
   }
 
   &__btn {
-    @extend %blue-border-button;
-    @extend .wave;
-    @include fontSH(18px, 22px);
     padding: 16px 34px;
+    @include borderButton($electric-blue);
+  }
+
+  &__btn:hover {
+    @include borderButtonHover($electric-blue);
   }
 
   &__triangle {
@@ -28,8 +30,134 @@
     background: lightblue; // right $white;
     transform: skewY(-3deg);
   }
+}
+
+.text p {
+  margin-bottom: 18px;
+}
+
+.promo {
+  margin-bottom: 18px;
+  width: 100%;
+  position: relative;
+
+  &__pic {
+    width: 100%;
+  }
+
+  &__img {
+    width: 100%;
+    height: 654px;
+  }
+
+  &__info {
+    position: absolute;
+    top: -500px;
+  }
+
+  &__title_big {
+    font-size: 44px;
+  }
+
+  &__title_big_light {
+    color: $white;
+  }
+
+  &__btn {
+    padding: 15px 27px;
+    @include borderButton($black);
+    line-height: 18px;
+  }
+
+  &__btn:hover {
+    @include borderButtonHover($black);
+  }
+
+  &__btn_light {
+    padding: 15px 27px;
+    @include borderButton($white);
+    line-height: 18px;
+  }
+
+  &__btn_light:hover {
+    @include borderButtonHover($white);
+    color: $black;
+  }
 
 }
+
+.promo-block {
+  margin-bottom: 18px;
+  position: relative;
+  text-align: center;
+
+  &__pic {
+    margin: 0 auto;
+  }
+
+  &__img {
+
+  }
+
+  &__info {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(0, -50%);
+    width: 345px;
+    text-align: left;
+  }
+
+  &__info_left {
+    left: 30%;
+  }
+
+  &__info_left_bottom {
+    left: 30%;
+    top: 40%;
+    transform: translate(0);
+  }
+
+  &__info_center_top {
+    left: 50%;
+    top: 63px;
+    transform: translate(-50%, 0);
+  }
+
+  &__info_center_top2 {
+    left: 50%;
+    top: 22%;
+    transform: translate(-50%, 0);
+    text-align: center;
+  }
+
+  &__title {
+    font-size: 34px;
+    margin-top: 0;
+  }
+
+  &__title_light {
+    color: $white;
+  }
+
+  &__btn {
+    padding: 15px 27px;
+    @include borderButton($black);
+  }
+
+  &__btn:hover {
+    @include borderButton($black);
+  }
+
+  &__btn_light {
+    @include borderButton($white);
+  }
+
+  &__btn_light:hover {
+    @include borderButton($white);
+  }
+}
+
 
 
 @media (max-width: $md) {
@@ -40,7 +168,9 @@
       transform: skewY(-2deg);
     }
   }
+
 }
+
 
 
 @media (max-width: $sm) {
@@ -50,6 +180,52 @@
 
     &__sub-title {
       font-size: 22px;
+    }
+  }
+
+  .promo {
+    &__img {
+      height: 353px;
+    }
+
+    &__info {
+      top: -275px;
+    }
+
+    &__title_big {
+      font-size: 24px;
+    }
+
+    &__title_big_light {
+      color: $white;
+    }
+
+    &__btn {
+      padding: 14px 18px;
+    }
+
+  }
+
+  .promo-block {
+    &__pic {
+      width: 100%;
+    }
+
+    &__img {
+      width: 100%;
+    }
+
+    &__info {
+      width: 273px;
+    }
+
+    &__info_left {
+      left: 25%;
+    }
+
+    &__title {
+      font-size: 24px;
+      margin-bottom: 15px;
     }
   }
 }
@@ -66,6 +242,89 @@
 
     &__btn {
       display: none;
+    }
+  }
+
+  .promo {
+    &__img {
+      height: 436px;
+    }
+
+    &__info {
+      position: static;
+      margin-top: -25px;
+      padding: 1px 20px 16px;
+      background: $white;
+      opacity: .9;
+    }
+
+
+    &__title_big {
+      margin-bottom: 10px;
+      margin-top: 10px;
+    }
+
+    &__title_big_light {
+      color: $black;
+    }
+
+    &__btn {
+      border: none;
+      padding: 0;
+      font-size: 16px;
+    }
+
+    &__btn_light {
+      color: $black;
+    }
+  }
+
+  .promo-block {
+    &__img {
+      height: 436px;
+    }
+
+    &__info {
+      width: 80%;
+      position: static;
+      margin-top: -25px;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 1px 20px 16px;
+      opacity: .9;
+      background: $white;
+    }
+
+    &__info_center_top {
+      transform: translate(0);
+    }
+
+    &__info_center_top2 {
+      transform: translate(0);
+      text-align: left;
+    }
+
+    &__title {
+      margin-top: 10px;
+    }
+
+    &__title_light {
+      color: $black;
+    }
+
+    &__title_big_light {
+      margin-top: 10px;
+      color: $black;
+    }
+
+    &__btn {
+      font-size: 16px;
+      padding: 0;
+      border: none;
+    }
+
+    &__btn_light {
+      color: $black;
     }
   }
 }

@@ -38,14 +38,14 @@
   }
 
   &__btn {
-    @extend %blue-border-button;
+    @include borderButton($electric-blue);
     @extend .wave;
     padding: 10px 14px;
 
     @include fontSH(16px, 16px);
   }
 
-  &__btn:focus {
+  &__btn:focus, &__btn:hover {
     color: $electric-blue;
   }
 
