@@ -1,5 +1,7 @@
 
 .blog-top {
+  position: relative;
+
   width: 100%;
   height: 690px;
   padding-top: 205px;
@@ -22,14 +24,6 @@
     @include borderButtonHover($electric-blue);
   }
 
-  &__triangle {
-    width: 100%;
-    height: 100px;
-    position: relative;
-    top: -50px;
-    background: lightblue; // right $white;
-    transform: skewY(-3deg);
-  }
 }
 
 .text p {
@@ -158,18 +152,6 @@
   }
 }
 
-
-
-@media (max-width: $md) {
-  .blog-top {
-    &__triangle {
-      height: 50px;
-      top: -21px;
-      transform: skewY(-2deg);
-    }
-  }
-
-}
 
 
 

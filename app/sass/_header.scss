@@ -1,5 +1,6 @@
 .header {
   position: absolute;
+  z-index: 2;
   top: 16px;
   left: 50%;
   transform: translate(-50%, 0);
@@ -32,6 +33,10 @@
     @include trans();
   }
 
+  &__nav-link_light {
+    color: $white;
+  }
+
   &__nav-link:hover {
     text-decoration: none;
     color: $electric-blue;
@@ -40,13 +45,21 @@
   &__btn {
     @include borderButton($electric-blue);
     @extend .wave;
-    padding: 10px 14px;
-
     @include fontSH(16px, 16px);
+
+    padding: 10px 14px;
+  }
+
+  &__btn_light {
+    @include borderButton($white);
   }
 
   &__btn:focus, &__btn:hover {
     color: $electric-blue;
+  }
+
+  &__btn_light:focus, &__btn_light:hover {
+    color: $white;
   }
 
   &__burger {

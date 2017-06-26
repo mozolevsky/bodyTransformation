@@ -13,4 +13,54 @@
     color: $slate;
     font-weight: bold;
   }
+
+
+  &__link {
+    margin-left: 40px;
+    color: $pinkish-grey;
+    @include trans();
+  }
+
+  &__link:hover {
+    text-decoration: none;
+    color: $electric-blue;
+    padding: 10px 0;
+    border-bottom: 1px solid transparent;
+    border-top: 1px solid transparent;
+  }
+}
+
+
+
+@media (max-width: $sm) {
+  .footer {
+    flex-direction: column;
+
+    height: auto;
+    margin-top: 20px;
+
+    &__copy {
+      margin-bottom: 20px;
+    }
+
+    &__nav {
+      margin-bottom: 30px;
+    }
+  }
+}
+
+
+@media (max-width: $xs) {
+  .footer {
+    &__nav {
+      flex-wrap: wrap;
+      justify-content: center;
+      text-align: center;
+    }
+
+    &__link {
+      margin-left: 20px;
+      line-height: 20px;
+    }
+  }
 }
