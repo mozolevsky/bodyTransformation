@@ -100,6 +100,10 @@
       @include trans();
     }
 
+    &__burger-dash_light {
+      background: $white;
+    }
+
     &__burger-dash__top {
       top: 0;
     }
