@@ -84,7 +84,7 @@ button {
   animation: ripple 1s ease-out;
 }
 
-.skew__bottom::after {
+%skew__bottom {
     content: '';
     position: absolute;
     left: 0;
@@ -94,11 +94,11 @@ button {
     height: 100px;
     bottom: -50px;
 
-    background: lightyellow; // right $white;
+    background: lightyellow;
     transform: skewY(-2.3deg);
 }
 
-.skew__top::before {
+%skew__top {
   content: '';
   position: absolute;
   left: 0;
@@ -112,6 +112,16 @@ button {
   transform: skewY(-2.3deg);
 }
 
+
+%skew__top_tablet {
+  top: -25px;
+  height: 50px;
+}
+
+%skew__bottom_tablet {
+  bottom: -25px;
+  height: 50px;
+}
 
 
 @media(max-width: $sm) {
@@ -131,16 +141,6 @@ button {
 
   h5 {
     font-size: 20px;
-  }
-
-  .skew__top::before {
-    top: -25px;
-    height: 50px;
-  }
-
-  .skew__bottom::after {
-    bottom: -25px;
-    height: 50px;
   }
 }
 

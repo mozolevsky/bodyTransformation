@@ -1,10 +1,12 @@
 
+
 .wyg-top {
   position: relative;
   padding-top: 85px;
   padding-bottom: 0;
 
   &::after {
+    @extend %skew__bottom;
     background: $white;
     bottom: 10px;
   }
@@ -79,6 +81,10 @@
 .wyg-module {
   position: relative;
 
+  &::after {
+    @extend %skew__bottom;
+  }
+
   &_first {
     padding-top: 150px;
     margin-top: -50px;
@@ -91,10 +97,82 @@
 
   &_second {
     padding-top: 100px;
+
+    &::after {
+      content: none;
+    }
   }
 
-  &_second::after  {
+  &_third {
+    padding-top: 115px;
     background-color: $pale-grey-three;
+
+    background-repeat: no-repeat;
+    background-image:
+            url('../img/days@2x.png'), url('../img/photos1@2x.png'), url('../img/photos2@2x.png'), url('../img/photos3@2x.png'), url('../img/photos4@2x.png'), url('../img/photos-caption@2x.png');
+    background-position: 0 400px, 66% 102%, 81% 90%, 92% 75%, 109% 62%, 95% 88%;
+    background-size: 88%, 214px 240px, 247px 206px, 243px 191px, 263px 200px, 239px 158px;
+
+    &::before {
+      z-index: -1;
+      background-color: $pale-grey-three;
+      @extend %skew__top;
+    }
+
+    &::after {
+      background-color: $white;
+    }
+  }
+
+  &_fourth {
+    padding-top: 92px;
+    background: url('../img/tracking-bg.png') no-repeat center;
+    background-size: cover;
+
+    &::after {
+      content: none;
+    }
+  }
+
+  &_fifth {
+    margin-top: -1px;
+    padding-top: 127px;
+    background-color: $pale-grey-three;
+
+    &::after {
+      background: $white;
+    }
+
+    &__img {
+      position: absolute;
+      z-index: 2;
+      bottom: 0;
+      right: 0;
+      width: 675px;
+      height: 544px;
+    }
+  }
+
+  &_sixth {
+    position: relative;
+    z-index: 2;
+    padding-top: 70px;
+    background: $white;
+  }
+
+  &_sixth::after {
+    z-index: -1;
+    background-color: $pale-grey-three;
+  }
+
+  &_seventh {
+    padding-top: 70px;
+    background-color: $pale-grey-three;
+
+    &::after {
+      z-index: 1;
+      background-color: $white;
+    }
   }
 
 
@@ -103,6 +181,15 @@
     @include fontSH(28px, 34px);
     font-weight: bold;
     text-align: center;
+
+    &_sixth {
+      margin-bottom: 12px;
+      font-size: 34px;
+    }
+
+    &_seventh {
+      font-size: 34px;
+    }
   }
 
   &__subtitle {
@@ -110,6 +197,10 @@
     @include fontSH(24px, 28px);
     text-align: center;
     color: $slate;
+
+    &_sixth {
+      margin-bottom: 89px;
+    }
   }
 
   &__list-block {
@@ -128,17 +219,17 @@
 
   &__item {
     position: relative;
-  }
 
-  &__item::before {
-    content: '';
-    position: absolute;
-    top: 6px;
-    left: -20px;
-    width: 11px;
-    height: 11px;
-    background: url('../img/check.svg') no-repeat center;
-    background-size: 10.7px 11px;
+    &:before {
+      content: '';
+      position: absolute;
+      top: 6px;
+      left: -20px;
+      width: 11px;
+      height: 11px;
+      background: url('../img/check.svg') no-repeat center;
+      background-size: 10.7px 11px;
+    }
   }
 
   &__item-title {
@@ -243,6 +334,7 @@
 
   text-align: center;
 
+
   &__title {
     font-family: "eurostile", sans-serif;
     font-size: 16px;
@@ -255,6 +347,12 @@
     position: relative;
     z-index: 2;
     margin-bottom: 20px;
+  }
+
+  &__main-icon_plus {
+    margin-bottom: 0;
+    height: 54px;
+    width: 157px;
   }
 
   &__small-icon {
@@ -280,8 +378,77 @@
     top: 50px;
     right: 20px;
   }
+
+  &__small-icon_5 {
+    top: -25px;
+    left: -21px;
+  }
+
+  &__small-icon_6 {
+    top: -25px;
+    right: 18px;
+  }
+
+  &__small-icon_7 {
+    top: 50px;
+    left: 5px;
+  }
+
+  &__small-icon_8 {
+    top: 50px;
+    right: -9px;
+  }
 }
 
+.wyg-section {
+  margin-bottom: 95px;
+
+  &_last {
+    padding-bottom: 240px;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &__content-wrapper {
+    position: relative;
+    width: 100%;
+  }
+
+  &__img {
+    width: 100%;
+    box-shadow: $shadow;
+  }
+
+  &__video {
+    width: 100%;
+    box-shadow: $shadow;
+  }
+
+  &__txt {
+    margin-top: 40px;
+  }
+
+  &__title {
+    margin-bottom: 17px;
+    @include fontSH(24px, 29px);
+    font-weight: bold;
+  }
+
+  &__desc {
+    font-size: 18px;
+    color: $slate;
+  }
+}
+
+
+@media (min-width: 1700px) {
+  .wyg-module_fifth__img {
+    left: calc(50% - 150px);
+    right: auto;
+  }
+}
 
 @media (max-width: 1370px) {
   .wyg-module {
@@ -305,6 +472,7 @@
 
     &::after {
       bottom: 24px;
+      height: 50px;
     }
 
     &__inner {
@@ -344,6 +512,11 @@
 
   .wyg-module {
 
+    &::after {
+      bottom: -25px;
+      height: 50px;
+    }
+
     &_first {
       padding-bottom: 272px;
     }
@@ -353,6 +526,62 @@
       background: url('../img/strawberries@2x.png') repeat-x;
       background-position: 3% 106%;
       background-size: 127px 197px;
+
+      &::after {
+        content: none;
+      }
+    }
+
+    &_third {
+      padding-top: 90px;
+      padding-bottom: 170px;
+
+      background-image: url('../img/days@2x.png'), url('../img/photos1@2x.png'), url('../img/photos2@2x.png'), url('../img/photos3@2x.png'), url('../img/photos4@2x.png');
+      background-position: 0 400px,29% 99%,106% 76%,3% 110%,109% 62%;
+      background-size: 88%, 214px 240px, 247px 206px, 243px 191px, 263px 200px;
+
+      &::before {
+        top: -28px;
+        height: 50px;
+        z-index: 1;
+      }
+    }
+
+    &_fourth {
+      padding-top: 75px;
+      padding-bottom: 250px;
+
+      background-position: 0 100%;
+      background-size: 113% 57%;
+    }
+
+    &_fifth {
+      padding-top: 0;
+      padding-bottom: 265px;
+    }
+
+    &_fifth::after {
+      z-index: 1;
+    }
+
+    &_fifth__img {
+      z-index: 1;
+      bottom: -11%;
+      right: 50%;
+      transform: translate(50%, 0);
+      width: 90%;
+    }
+
+    &_sixth {
+      padding-top: 30px;
+    }
+
+    &_seventh {
+      overflow: hidden;
+    }
+
+    &__list-block_fifth {
+      z-index: 0;
     }
 
     &__title {
@@ -371,6 +600,10 @@
       margin-bottom: 329px;
     }
 
+    &__subtitle_sixth {
+      margin-bottom: 55px;
+    }
+
     &__video-container {
       bottom: -311px;
       z-index: 2;
@@ -387,6 +620,50 @@
 
     &__strawberry {
       display: none;
+    }
+
+  }
+
+  .wyg-section {
+    margin-bottom: 59px;
+
+    &__txt {
+      margin-top: 0;
+
+      &_center-mobile {
+        margin-top: 10px;
+        text-align: center;
+      }
+    }
+
+    &__title {
+      margin-top: 0;
+    }
+
+    &__content-wrapper {
+      height: 274px;
+    }
+
+    &__img {
+      width: 100%;
+      height: 100%;
+
+      &_left {
+        position: absolute;
+        right: 0;
+        width: auto;
+      }
+
+      &_right {
+        position: absolute;
+        left: 0;
+        width: auto;
+      }
+    }
+
+    &__video {
+      width: 100%;
+      height: 100%;
     }
 
   }
@@ -424,9 +701,42 @@
       padding-bottom: 164px;
     }
 
+    &_third {
+      padding-top: 48px;
+      padding-bottom: 150px;
+
+      background-image: url('../img/days@2x.png'), url('../img/photos1@2x.png'), url('../img/photos2@2x.png');
+      background-position: 0 400px, -45% 95%, 5% 104%;
+      background-size: 88%, 214px 240px, 247px 206px;
+    }
+
+    &_fourth {
+      padding-top: 70px;
+      padding-bottom: 280px;
+
+      background-position: 0 bottom;
+      background-size: 200%;
+    }
+
+    &_fifth {
+
+    }
+
+    &_sixth {
+
+    }
+
     &__list-block {
       margin-left: 30px;
       margin-right: 30px;
+      padding-left: 44px;
+      padding-right: 30px;
+    }
+
+    &__subtitle {
+      &_sixth {
+        margin-bottom: 36px;
+      }
     }
 
     &__video-container {
@@ -436,6 +746,27 @@
 
     &__video {
       transform: scale(.8) rotateX(-1deg) rotateY(-20deg) rotate(1deg) translateX(100px) translateY(0)!important;
+    }
+  }
+
+  .wyg-section {
+    margin-bottom: 30px;
+
+    &__content-wrapper {
+      height: 164px;
+
+      &_video {
+        height: auto;
+      }
+    }
+
+
+    &__title {
+      @include fontSH(18px, 22px);
+    }
+
+    &__desc {
+      font-size: 16px;
     }
   }
 }
