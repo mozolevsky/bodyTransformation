@@ -1,12 +1,29 @@
 
 .blog-top {
   position: relative;
-
   width: 100%;
   height: 690px;
-  padding-top: 205px;
+  margin-bottom: 53px;
+  background: linear-gradient(to right, #ffffff 1%, #ebeff3 100%);
 
-  background-image: linear-gradient(181deg, $white, $pale-grey-two); // incorrect gradient
+  &::after {
+    @extend %skew__bottom;
+    bottom: -45px;
+    background: $white;
+  }
+
+  &__bg {
+    width: 100%;
+    height: 100%;
+    background-image: url('../img/getstarted-top.png');
+    background-repeat: no-repeat;
+    background-position: calc(50% + 400px) 60%;
+    background-size: 506px 550px;
+  }
+
+  &__title {
+    padding-top: 205px;
+  }
 
   &__sub-title {
     margin-bottom: 22px;
@@ -158,7 +175,21 @@
 @media (max-width: $sm) {
   .blog-top {
     height: 570px;
-    padding-top: 131px;
+    margin-bottom: 35px;
+
+    &::after {
+      height: 50px;
+      bottom: -25px;
+    }
+
+    &__bg {
+      background-position: calc(50% + 250px) 86%;
+      background-size: 406px 450px;
+    }
+
+    &__title {
+      padding-top: 131px;
+    }
 
     &__sub-title {
       font-size: 22px;
@@ -214,9 +245,18 @@
 
 @media (max-width: $xs) {
   .blog-top {
-    height: 375px;
-    padding-top: 68px;
+    height: 450px;
     text-align: center;
+
+    &__bg {
+      background-position: 50% 152px;
+      background-size: 374px 400px;
+    }
+
+    &__title {
+      padding-top: 68px;
+      margin: 0 -15px;
+    }
 
     &__sub-title {
       display: none;
