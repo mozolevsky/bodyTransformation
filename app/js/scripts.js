@@ -1,3 +1,8 @@
 "use strict";
 
-var a = void 0;
+let app = new Vue({
+    el: "#app",
+    data: {
+        formStepOne: false
+    }
+});

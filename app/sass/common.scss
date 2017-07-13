@@ -135,6 +135,10 @@ button {
   100%{background-position:61% 0%}
 }
 
+[v-cloak] {
+  display: none;
+}
+
 
 @media(max-width: $sm) {
   body {
