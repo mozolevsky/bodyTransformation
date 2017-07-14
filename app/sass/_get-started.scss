@@ -1,9 +1,10 @@
 
 .blog-top {
   position: relative;
+  z-index: 0;
   width: 100%;
   height: 690px;
-  margin-bottom: 53px;
+  margin-bottom: -15px;
   background: linear-gradient(to right, #ffffff 1%, #ebeff3 100%);
 
   &::after {
@@ -49,8 +50,23 @@
 
 .promo {
   margin-bottom: 18px;
-  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1400px;
   position: relative;
+  text-align: right;
+
+  &_center {
+    text-align: center;
+  }
+
+  &_gray-bg {
+    background-image: linear-gradient(to right, $white, rgb(243, 241, 242));
+  }
+
+  &_black-bg {
+    background-color: $black;
+  }
 
   &__pic {
     width: 100%;
@@ -59,11 +75,16 @@
   &__img {
     width: 100%;
     height: 654px;
+
+    &_min {
+      width: auto;
+    }
   }
 
   &__info {
     position: absolute;
     top: -500px;
+    text-align: left;
   }
 
   &__title_big {
@@ -107,7 +128,8 @@
   }
 
   &__img {
-
+      width: 768px;
+      height: auto;
   }
 
   &__info {
@@ -120,11 +142,11 @@
   }
 
   &__info_left {
-    left: 30%;
+    left: calc((100% - 540px) / 2);
   }
 
   &__info_left_bottom {
-    left: 30%;
+    left: calc((100% - 540px) / 2);
     top: 40%;
     transform: translate(0);
   }
@@ -175,7 +197,7 @@
 @media (max-width: $sm) {
   .blog-top {
     height: 570px;
-    margin-bottom: 35px;
+    margin-bottom: 0;
 
     &::after {
       height: 50px;
@@ -268,8 +290,15 @@
   }
 
   .promo {
+    text-align: center;
+
+    &_gray-bg, &_black-bg {
+      background: transparent;
+    }
+
     &__img {
       height: 436px;
+      width: 375px;
     }
 
     &__info {
@@ -304,6 +333,7 @@
   .promo-block {
     &__img {
       height: 436px;
+      width: 375px;
     }
 
     &__info {
