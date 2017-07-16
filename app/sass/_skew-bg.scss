@@ -75,8 +75,8 @@
   }
 
   &__item_no::before {
-    background: red;
-
+    background: url('../img/list-crossed.svg') no-repeat center;
+    background-size: 11px 12px;
   }
 }
 

@@ -1,11 +1,18 @@
 
 .about-top {
+  position: relative;
   padding-top: 132px;
   padding-bottom: 185px;
 
   text-align: center;
 
-  background: lightblue; // incorrect gradient
+  background: url('../img/contactus-top-bg.png') no-repeat left center;
+  background-size: cover;
+
+  &::after {
+    @extend %skew__bottom;
+    background: $white;
+  }
 
   &__title {
     margin-bottom: 37px;
@@ -54,6 +61,11 @@
   padding-top: 50px;
   padding-bottom: 100px;
 
+  &::after {
+    @extend %skew__bottom;
+    background: $white;
+  }
+
   &__inner::after {
     position: absolute;
     left: 50%;
@@ -86,6 +98,11 @@
   text-align: center;
   background-color: $pale-grey-three;
 
+  &::after {
+    @extend %skew__bottom;
+    background-color: $pale-grey-three;
+  }
+
   &__title {
     margin-bottom: 19px;
   }
@@ -103,8 +120,14 @@
   padding-top: 180px;
   padding-bottom: 152px;
 
-  background: $black;
+  background: $black url('../img/contactus-girl.jpg') no-repeat right center;
+  background-size: cover;
   color: $white;
+
+  &::after {
+    @extend %skew__bottom;
+    background-color: $pale-grey-three;
+  }
 
   &__title {
     margin-bottom: 18px;
@@ -130,11 +153,26 @@
 
 .about-bottom {
   position: relative;
+  overflow-x: hidden;
 
-  padding-top: 98px;
+  padding-top: 67px;
   padding-bottom: 53px;
 
   background-color: $pale-grey-three;
+
+  &__img-wrapper {
+    position: absolute;
+    z-index: 2;
+    bottom: 0;
+    left: calc((100% - 1100px) / 2);
+
+    width: auto;
+    height: 90%;
+  }
+
+  &__img {
+    height: 100%;
+  }
 
   &__inner {
     padding: 37px 60px 47px 60px;
@@ -155,6 +193,7 @@
     display: inline-block;
     margin-top: 40px;
     padding: 21px 106px;
+    width: 100%;
 
     @extend %blue-button;
     @extend .wave;
@@ -166,6 +205,11 @@
   .about-top {
     padding-top: 93px;
     padding-bottom: 170px;
+
+    &::after {
+      bottom: -24px;
+      height: 50px;
+    }
 
     &__title {
       margin-bottom: 27px;
@@ -180,6 +224,11 @@
     padding-top: 25px;
     padding-bottom: 40px;
 
+    &::after {
+      bottom: -24px;
+      height: 50px;
+    }
+
     &__inner::after {
       top: -25px;
       bottom: -25px;
@@ -188,6 +237,11 @@
 
   .mission {
     padding-top: 50px;
+
+    &::after {
+      bottom: -24px;
+      height: 50px;
+    }
 
     &__title {
       margin-bottom: 10px;
@@ -202,6 +256,12 @@
   .results {
     padding-top: 100px;
     padding-bottom: 81px;
+    background-position: 42% 100%;
+
+    &::after {
+      bottom: -24px;
+      height: 50px;
+    }
 
     &__title {
       margin-bottom: 12px;
@@ -221,6 +281,10 @@
   .about-bottom {
     padding-top: 68px;
     padding-bottom: 33px;
+
+    &__img-wrapper {
+      left: calc((100% - 1029px) / 2);
+    }
 
     &__inner {
       padding: 46px 56px;
@@ -287,6 +351,8 @@
   }
 
   .mission {
+
+
     &__title {
       margin-bottom: 7px;
       font-size: 34px;
@@ -301,6 +367,11 @@
     padding-top: 78px;
     padding-bottom: 56px;
     text-align: center;
+    background-position: 59% 100%;
+
+    &::after {
+      background-color: $white;
+    }
 
     &__title {
       margin-bottom: 12px;
@@ -327,6 +398,10 @@
 
     background: $white;
     border-bottom: 1px solid $pale-grey-three;;
+
+    &__img-wrapper {
+      display: none;
+    }
 
     &__inner {
       padding: 0 15px;
