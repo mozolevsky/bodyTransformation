@@ -1,0 +1,210 @@
+.trainers {
+  position: relative;
+  padding-top: 80px;
+
+  &::after {
+    @extend %skew__bottom;
+    bottom: 0;
+    background: $white;
+  }
+
+  &__title {
+    text-align: center;
+  }
+
+  &__desc {
+    margin-bottom: 63px;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;
+    color: $gunmetal;
+  }
+
+  &__inner {
+    position: relative;
+    z-index: 2;
+    padding-top: 406px;
+    display: flex;
+  }
+
+  &__trainer {
+    position: relative;
+    margin-right: 10px;
+    width: 267.5px;
+    height: 178px;
+    background: $white;
+    box-shadow: $shadow;
+    transform: skewX(-10deg);
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__img {
+    position: absolute;
+    left: 50%;
+    top: -401px;
+    transform: translate(-50%, 0) skewX(10deg);
+    width: auto;
+    height: 401px;
+
+  }
+
+   &__text {
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     width: 80%;
+     transform: translate(-50%, - 50%) skewX(10deg);
+     text-align: center;
+   }
+
+  &__name {
+    position: relative;
+    margin-bottom: 8px;
+    padding-bottom: 17px;
+    opacity: 0.9;
+    font-family: 'EurostileExt-BlaIta';
+    text-transform: uppercase;
+    font-size: 36px;
+    line-height: 0.56;
+    color: $black;
+    text-align:center;
+
+    &::after {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translate(-50%, 0);
+      content: '';
+      width: 29px;
+      height: 1px;
+      border: solid 1px $black;
+    }
+  }
+
+  &__spec {
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    font-style: italic;
+    line-height: 1.14;
+    text-align: center;
+    color: $gunmetal;
+  }
+
+  &__link {
+    position: relative;
+    padding-left: 22px;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 16px;
+    text-align: center;
+    color: $electric-blue;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 16px;
+      height: 16px;
+      background: url('../img/program-play.svg') no-repeat center;
+      background-size: cover;
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .trainers {
+    &__trainer {
+      width: 21%;
+    }
+
+    &__inner {
+      justify-content: center;
+      padding-top: 406px;
+      width: 90%;
+      margin: 0 auto;
+    }
+
+    &__img {
+      width: 100%;
+      left: 40%;
+    }
+
+    &__name {
+      font-size: 30px;
+    }
+  }
+}
+
+@media (max-width: $sm) {
+  .trainers {
+    padding-top: 60px;
+
+    &::after {
+      height: 50px;
+      bottom: -24px;
+    }
+
+    &__title {
+      margin-bottom: 0;
+    }
+
+    &__desc {
+      font-size: 20px;
+    }
+
+    &__inner {
+      padding-top: 254px;
+      width: 85%;
+      margin: 0 auto;
+    }
+
+    &__trainer {
+      width: 23%;
+      margin-right: 5px;
+    }
+
+    &__name {
+      font-size: 20px;
+    }
+
+    &__img {
+      top: -254px;
+      height: 254px;
+      width: auto;
+      left: 50%;
+    }
+  }
+}
+
+@media (max-width: $xs) {
+  .trainers {
+
+    &__desc {
+      margin-left: 10px;
+      margin-right: 10px;
+      margin-bottom: 28px;
+    }
+
+    &__inner {
+      padding-top: 0;
+      flex-wrap: wrap;
+      overflow-x: hidden;
+      width: 100%;
+    }
+
+    &__trainer {
+      margin-top: 203px;
+      width: 48%;
+    }
+
+    &__img {
+      top: -203px;
+      height: 203px;
+    }
+  }
+}

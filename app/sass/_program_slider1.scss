@@ -1,0 +1,21 @@
+.slider1 {
+  padding-top: 70px;
+
+  &__title {
+    margin-bottom: 21px;
+    font-size: 44px;
+    font-weight: bold;
+    text-align: center;
+    color: $black;
+  }
+
+  &__desc {
+    margin: 0 auto;
+    margin-bottom: 70px;
+    width: 682px;
+    font-size: 24px;
+    line-height: 1.17;
+    text-align: center;
+    color: $gunmetal;
+  }
+}
