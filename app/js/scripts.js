@@ -7,7 +7,9 @@ let app = new Vue({
             formStepOne: true,
             weight: '',
             height: '',
-            age: ''
+            age: '',
+            name: '',
+            email: ''
         }
     }
 });

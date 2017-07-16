@@ -6,7 +6,7 @@
 .calc {
   padding-top: 136px;
   margin-bottom: 60px;
-  background: lightyellow no-repeat left bottom;
+  background: transparent no-repeat left bottom;
 
   &__title {
     font-size: 34px;
@@ -23,7 +23,7 @@
   &__laptop-bg {
     position: relative;
     margin: 0 calc((100% - 1072px)/2);
-    height: 561px;
+    min-height: 561px;
     width: 1072px;
     background: url('../img/macbook.png') no-repeat center bottom;
     background-size: contain;
@@ -237,7 +237,8 @@
 .slide1-leave-active,
 .slide2-enter-active,
 .slide2-leave-active {
-  transition: all 0.5s ease;
+  transition: all 0.3s ease;
+  position: absolute;
 }
 
 .slide1-enter {
@@ -248,12 +249,8 @@
   opacity: 1;
 }
 
-.slide1-leave {
-  opacity: 1;
-}
-
 .slide1-leave-to {
-  opacity: 0;
+  opacity: 1;
 }
 
 .slide2-enter {
@@ -277,14 +274,14 @@
     &__laptop-bg {
       position: static;
       width: 770px;
-      height: auto;
+      height: 450px;
       margin: 0 calc((100% - 770px) / 2);
       background: $white;
     }
 
     &__form-wrapper {
       margin: 0;
-      width: 100%;
+      width: 770px;
       border-radius: $borderRad;
       box-shadow: 0 15px 35px 0 $transparent-2, 0 5px 15px 0 rgba(0, 0, 0, 0.07);
     }
@@ -309,12 +306,14 @@
 
     &__laptop-bg {
       width: 510px;
+      height: auto;
       margin: 0 calc((100% - 510px) / 2);
       background: $white;
     }
 
     &__form-wrapper {
       height: auto;
+      width: 510px;
     }
 
     &__captions-block {
@@ -366,7 +365,7 @@
 
 @media (max-width: $xs) {
   .calc {
-    padding-bottom: 73px;
+   // padding-bottom: 73px;
     margin-bottom: 23px;
 
     &__title {
@@ -381,8 +380,12 @@
     }
 
     &__laptop-bg {
-      width: 80%;
-      margin: 0 10%;
+      width: 310px;
+      margin: 0 auto;
+    }
+
+    &__form-wrapper {
+      width: 310px;
     }
 
     &__captions-block {

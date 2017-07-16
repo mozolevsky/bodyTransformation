@@ -92,11 +92,11 @@
                           </form>
                       </div>
                   </transition>
-                  <transition name="slade2">
+                  <transition name="slide2">
                       <div v-if="!formData.formStepOne" class="calc__form-wrapper">
                           <div class="bmr">
                               <button class="bmr__btn-back" type="button" @click.prevent="formData.formStepOne = !formData.formStepOne">« back</button>
-                              <button class="bmr__btn-back_mobile">«</button>
+                              <button class="bmr__btn-back_mobile" @click.prevent="formData.formStepOne = !formData.formStepOne">«</button>
                               <h5 class="bmr__title">Your bmr is:</h5>
                               <div class="bmr__circle">
                                   <div class="bmr__circle-item">
@@ -108,8 +108,14 @@
                               </div>
                               <form class="bmr__form" action="" class="bmr__form">
                                   <div class="bmr__form-area">
-                                      <input class="calc-form__input bmr__input_first" type="text" name="first name" value="" placeholder="Enter your first name">
-                                      <input class="calc-form__input bmr__input_second" type="text" name="email" value="" placeholder="Enter email">
+                                      <input class="calc-form__input bmr__input_first"
+                                             v-bind:class="{ 'calc-form__input_valid': formData.name }"
+                                             v-model="formData.name" type="text" name="first name"
+                                             placeholder="Enter your first name">
+                                      <input class="calc-form__input bmr__input_second"
+                                             v-bind:class="{ 'calc-form__input_valid': formData.email }"
+                                             v-model="formData.email" type="text" name="email"
+                                             placeholder="Enter email">
                                       <button class="calc-form__btn bmr__btn-go">Go</button>
                                   </div>
                               </form>
