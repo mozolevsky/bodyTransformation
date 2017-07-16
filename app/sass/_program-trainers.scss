@@ -1,4 +1,5 @@
 .trainers {
+  margin-bottom: -50px;
   position: relative;
   padding-top: 80px;
 
@@ -143,10 +144,11 @@
 @media (max-width: $sm) {
   .trainers {
     padding-top: 60px;
+    margin-bottom: -30px;
 
     &::after {
       height: 50px;
-      bottom: -24px;
+      bottom: 0;
     }
 
     &__title {
@@ -183,6 +185,7 @@
 
 @media (max-width: $xs) {
   .trainers {
+    padding-top: 30px;
 
     &__desc {
       margin-left: 10px;

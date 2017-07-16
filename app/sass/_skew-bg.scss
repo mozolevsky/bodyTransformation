@@ -71,7 +71,8 @@
   }
 
   &__item_yes::before {
-    background: green;
+    background: url('../img/tick_icon.svg') no-repeat center;
+    background-size: 12px 11px;
   }
 
   &__item_no::before {
