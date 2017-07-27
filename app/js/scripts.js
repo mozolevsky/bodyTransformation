@@ -11,12 +11,38 @@ let app = new Vue({
             heightUnitChecked: false,
             age: '',
             name: '',
-            email: ''
+            email: '',
+            firstValidCounter: 0
         }
     },
     methods: {
         isNum(value) {
             return !isNaN(value);
+        },
+        isEmail(email) {
+            let re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+            return re.test(email);
+        },
+        goToSecondStep() {
+            let dataArr = [this.formData.weight, this.formData.height, this.formData.age];
+            let counter = 0;
+            let vm = this;
+
+            dataArr.forEach(function (item) {
+                if (item && vm.isNum(item)) {
+                    counter +=1;
+                }
+            });
+
+            console.log(counter);
+
+            if (counter == 3) {
+                console.log('We can not push the button');
+                this.formData.formStepOne = false;
+                counter = 0;
+            } else {
+                console.log('We can not do it');
+            }
         }
     },
     computed: {
@@ -52,9 +78,9 @@ let app = new Vue({
         },
         emailStyles() {
             return {
-                'calc-form__input_valid': this.formData.email && this.isNum(this.formData.email),
-                'calc-form__input_invalid': this.formData.email && !this.isNum(this.formData.email)
+                'calc-form__input_valid': this.formData.email && this.isEmail(this.formData.email),
+                'calc-form__input_invalid': this.formData.email && !this.isEmail(this.formData.email)
             }
-        }
+        },
     }
 });

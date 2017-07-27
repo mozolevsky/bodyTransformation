@@ -6,7 +6,10 @@
 .calc {
   padding-top: 136px;
   margin-bottom: 60px;
-  background: transparent no-repeat left bottom;
+  background: url('../img/bg-pattern-right.png'), url('../img/bg-pattern-left.png'), url('../img/calc-bg.jpg');
+  background-position: right 85%, left 60%, center 136px;
+  background-repeat: no-repeat;
+  background-size: auto, auto, cover;
 
   &__title {
     font-size: 34px;
@@ -23,6 +26,7 @@
   &__laptop-bg {
     position: relative;
     margin: 0 calc((100% - 1072px)/2);
+    margin-bottom: -55px;
     min-height: 561px;
     width: 1072px;
     background: url('../img/macbook.png') no-repeat center bottom;
@@ -72,7 +76,11 @@
   width: calc(100% - 175px);
   height: 450px;
 
-  background-color: $pale-grey-four;
+  background-image: url('../img/bg-human.png');
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: contain;
+  background-color: #EFF7FD;
 
   &__area {
     display: flex;
@@ -81,7 +89,6 @@
     height: 20%;
 
     border-bottom: solid 1px rgb(222, 231, 237);
-    background-color: #EFF7FD;
 
     &:last-child {
       border-bottom: none;
@@ -104,7 +111,7 @@
     padding: 16px 96px 17px 19px;
     width: 361.3px;
     height: 54px;
-    outline-color: #008cff;
+    outline: none;
     border: none;
     border-radius: 5px;
     background-color: $white;
@@ -207,7 +214,6 @@
     border-radius: 4px;
     background-color: $duck-egg-blue;
     border: solid 1px rgb(239, 247, 253);
-    @extend .wave;
 
     &_mobile {
       display: none;
@@ -250,14 +256,18 @@
     justify-content: space-between;
   }
 
-  &__input_first {
-    width: 40%;
+  &__form-area {
+    width: 100%;
   }
 
-
+  &__input_first {
+    width: 42%;
+    padding-right: 0;
+  }
 
   &__input_second {
-    width: 40%;
+    width: 42%;
+    padding-right: 0;
   }
 
   &__btn-go {
@@ -313,7 +323,8 @@
       width: 770px;
       height: 450px;
       margin: 0 calc((100% - 770px) / 2);
-      background: $white;
+      margin-bottom: -50px;
+      background: transparent;
     }
 
     &__form-wrapper {
@@ -345,7 +356,6 @@
       width: 510px;
       height: auto;
       margin: 0 calc((100% - 510px) / 2);
-      background: $white;
     }
 
     &__form-wrapper {
@@ -367,8 +377,9 @@
 
   .calc-form {
     width: calc(100% - 120px);
+    margin-bottom: -50px;
     height: 550px;
-    background-color: $white;
+    background-color: transparent;
 
     &__area {
       padding-left: 0;

@@ -101,7 +101,7 @@
                                   <input class="calc-form__input" v-bind:class="ageStyles" v-model="formData.age" type="text" name="weight"  placeholder="Enter your age">
                               </div>
                               <div class="calc-form__area">
-                                  <button class="calc-form__btn" @click.prevent="formData.formStepOne = !formData.formStepOne">Calculate</button>
+                                  <button class="calc-form__btn" @click.prevent="goToSecondStep()">Calculate</button>
                               </div>
                           </form>
                       </div>
@@ -188,7 +188,7 @@
     </footer>
 </div>
 
-<script src="libs/vue/dist/vue.min.js"></script>
+<script src="libs/vue/dist/vue.js"></script>
 <script src="libs/jquery/dist/jquery.min.js"></script>
 <script src="libs/mmenu/jquery.mmenu.js" type="text/javascript"></script>
 <script type="text/javascript">
