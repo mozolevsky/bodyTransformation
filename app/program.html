@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -133,7 +132,7 @@
         </div>
     </section>
 
-    <!--<section class="slider1">
+    <section class="slider1">
         <div class="container">
             <div class="row">
                 <div class="slider1__inner">
@@ -142,12 +141,20 @@
                         dictum ex at, volutpat nislnulla posuere gravida.
                     </p>
                     <div class="slider1__wrapper">
-
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">Slide 1</div>
+                                <div class="swiper-slide">Slide 2</div>
+                                <div class="swiper-slide">Slide 3</div>
+                                <div class="swiper-slide">Slide 4</div>
+                                <div class="swiper-slide">Slide 5</div>
+                            </div>
+                            <div class="swiper-pagination"></div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>  не сделан -->
+    </section>
 
     <section class="round-diagram">
         <div class="round-diagram__container container">
@@ -651,7 +658,24 @@
     var swiper = new Swiper('.swiper-container', {
         pagination: '.swiper-pagination',
         paginationClickable: true,
-        centeredSlides: true
+        centeredSlides: true,
+        paginationCustomRender: function(swiper, current, total) {
+            var names = [];
+            $(".swiper-wrapper .swiper-slide").each(function(i) {
+                names.push($(this).data("name"));
+            });
+            var text = "<span style='background-color:black;padding:20px;'>";
+            for (let i = 1; i <= total; i++) {
+                if (current == i) {
+                    text += "<span style='border-top:1px solid green;margin-right:4px;color:green;padding:10px;'>" + names[i] + "</span>";
+                } else {
+                    text += "<span style='border-top:1px solid white;margin-right:4px;color:white;padding:10px;'>" + names[i] + "</span>";
+                }
+
+            }
+            text += "</span>";
+            return text;
+        }
     });
 
     $(function() {
