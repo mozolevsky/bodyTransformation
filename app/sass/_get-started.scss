@@ -52,7 +52,7 @@
   margin-bottom: 18px;
   margin-left: auto;
   margin-right: auto;
-  max-width: 1400px;
+  width: 100%;
   position: relative;
   text-align: right;
 
@@ -74,17 +74,24 @@
 
   &__img {
     width: 100%;
-    height: 654px;
+    max-height: 654px;
 
     &_min {
-      width: auto;
+      width: 100%;
     }
   }
 
   &__info {
     position: absolute;
-    top: -500px;
+    top: 40%;
+    left: calc((100% - 555px) / 2);
+    transform: translate(0, -50%);
     text-align: left;
+    width: 450px;
+
+    &_center {
+      left: calc((100% - 555px) / 2 + 95px);
+    }
   }
 
   &__title_big {
@@ -142,11 +149,11 @@
   }
 
   &__info_left {
-    left: calc((100% - 540px) / 2);
+    left: calc((100% - 595px) / 2);
   }
 
   &__info_left_bottom {
-    left: calc((100% - 540px) / 2);
+    left: calc((100% - 595px) / 2);
     top: 40%;
     transform: translate(0);
   }
@@ -191,6 +198,21 @@
   }
 }
 
+.text-marked {
+
+  &_blue {
+    font-weight: bold;
+    border-radius: 1em 0 1em 0;
+    background-image: linear-gradient(-100deg, rgba(187,245,255,0.3), rgba(187,245,255,0.7) 95%, rgba(187,245,255,0.1));
+  }
+
+  &_pink {
+    font-weight: bold;
+    border-radius: 1em 0 1em 0;
+    background-image: linear-gradient(-100deg, rgba(254,214,253,0.3), rgba(254,214,253,0.7) 95%, rgba(254,214,253,0.1));
+  }
+}
+
 
 
 
@@ -224,7 +246,7 @@
     }
 
     &__info {
-      top: -275px;
+      /*top: -275px;*/
     }
 
     &__title_big {
@@ -255,7 +277,7 @@
     }
 
     &__info_left {
-      left: 25%;
+      left: 12%;
     }
 
     &__title {
@@ -297,16 +319,20 @@
     }
 
     &__img {
-      height: 436px;
+      height: auto;
       width: 375px;
     }
 
     &__info {
       position: static;
       margin-top: -25px;
+      margin-left: auto;
+      margin-right: auto;
       padding: 1px 20px 16px;
+      width: 100%;
       background: $white;
       opacity: .9;
+      transform: translate(0, 0);
     }
 
 
@@ -332,7 +358,7 @@
 
   .promo-block {
     &__img {
-      height: 436px;
+      height: auto;
       width: 375px;
     }
 
@@ -345,6 +371,7 @@
       padding: 1px 20px 16px;
       opacity: .9;
       background: $white;
+      transform: translate(0, 0);
     }
 
     &__info_center_top {
