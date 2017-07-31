@@ -46,17 +46,17 @@
   &__btn {
     width: 58px;
     height: 58px;
+    box-sizing: border-box;
 
     border: 1px solid $silver;
     border-radius: 50%;
-    background: transparent url('../img/arrow-down1x10.png') no-repeat center;
-
+    background: transparent url('../img/what-we-get_arrow-down.svg') no-repeat center;
+    background-size: 15px;
+    @include trans();
     animation: bounce 2s infinite;
-    @extend .wave;
   }
 
   &__btn:hover {
-    background-color: $electric-blue;
     border: 1px solid $electric-blue;
     animation: none;
   }
@@ -100,12 +100,19 @@
   &_third {
     padding-top: 115px;
     background-color: $pale-grey-three;
-
     background-repeat: no-repeat;
-    background-image:
-            url('../img/days@2x.png'), url('../img/photos1@2x.png'), url('../img/photos2@2x.png'), url('../img/photos3@2x.png'), url('../img/photos4@2x.png'), url('../img/photos-caption@2x.png');
-    background-position: 0 400px, 66% 102%, 81% 90%, 92% 75%, 109% 62%, 95% 88%;
-    background-size: 88%, 214px 240px, 247px 206px, 243px 191px, 263px 200px, 239px 158px;
+    background-image:  url('../img/days@2x.png');
+    background-position: 0 400px;
+    background-size: 88%;
+
+    &-wrapper {
+      position: relative;
+      z-index: 2;
+      background-repeat: no-repeat;
+      background-image: url('../img/photos1@2x.png'), url('../img/photos2@2x.png'), url('../img/photos3@2x.png'), url('../img/photos4@2x.png'), url('../img/photos-caption@2x.png');
+      background-position: 66% 98%, 81% 90%, 92% 75%, 109% 62%, 95% 88%;
+      background-size: 214px 240px, 247px 206px, 243px 191px, 263px 200px, 239px 158px;
+    }
 
     &::before {
       z-index: -1;
@@ -184,7 +191,7 @@
 
   &__title {
     margin-bottom: 4px;
-    @include fontSH(28px, 34px);
+    @include fontSH(34px, 34px);
     font-weight: bold;
     text-align: center;
 
@@ -323,7 +330,10 @@
     top: 30px;
     width: 816px;
     height: 669px;
+  }
 
+  &__tablet-phone {
+    display: none;
   }
 
 }
@@ -342,7 +352,7 @@
 
 
   &__title {
-    font-family: "eurostile", sans-serif;
+    font-family: "eurostile-extended", sans-serif;
     font-size: 16px;
     text-align: center;
     text-transform: uppercase;
@@ -465,18 +475,29 @@
   border-radius: $borderRad;
 
   &__gradient {
+    position: relative;
     padding: 84px 40px;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 50%;
-    background: linear-gradient(50deg, #1f16df, #2751d4, #6ea9ca);
+    background: linear-gradient(50deg, rgb(31,22,223), rgb(39,81,212), rgb(110,169,202));
     background-size: 400% 400%;
-
     animation: gradient 29s ease infinite;
+
+    &::after {
+      position: absolute;
+      content: '';
+      width: 100%;
+      height: 100%;
+      background: url('../img/desktop_7_bg-texture.jpg');
+      opacity: 0.2;
+    }
   }
 
   &__img {
+    position: relative;
+    z-index: 2;
     width: 100%;
   }
 
@@ -782,6 +803,10 @@
       background-position: 0 400px,29% 99%,106% 76%,3% 110%,109% 62%;
       background-size: 88%, 214px 240px, 247px 206px, 243px 191px, 263px 200px;
 
+      &-wrapper {
+        background-image: none;
+      }
+
       &::before {
         top: -28px;
         height: 50px;
@@ -866,6 +891,10 @@
       bottom: -311px;
       z-index: 2;
       width: 100%;
+
+      &::after {
+        content: none;
+      }
     }
 
     &__video {
@@ -874,6 +903,15 @@
 
     &__left-laptop {
       display: none;
+    }
+
+    &__tablet-phone {
+      position: absolute;
+      display: block;
+      top: -300px;
+      left: 0;
+      width: 100%;
+      height: auto;
     }
 
     &__strawberry {
@@ -980,7 +1018,6 @@
   }
 }
 
-
 @media (max-width: $xs) {
   .wyg-top {
     padding-top: 79px;
@@ -1016,9 +1053,9 @@
       padding-top: 48px;
       padding-bottom: 150px;
 
-      background-image: url('../img/days@2x.png'), url('../img/photos1@2x.png'), url('../img/photos2@2x.png');
-      background-position: 0 400px, -45% 95%, 5% 104%;
-      background-size: 88%, 214px 240px, 247px 206px;
+      background-image: url('../img/mobile_4_days-mobile.png'), url('../img/photos1@2x.png'), url('../img/photos2@2x.png');
+      background-position: 94px bottom, -45% 95%, 5% 104%;
+      background-size: 95%, 214px 240px, 247px 206px;
     }
 
     &_fourth {
@@ -1053,10 +1090,35 @@
     &__video-container {
       bottom: -180px;
       overflow: hidden;
+
+      &::after {
+        position: absolute;
+        top: 57px;
+        z-index: 5;
+        left: 0;
+        width: 123px;
+        height: 112px;
+        content: "";
+        background: url(../img/mobile_1_video-caption.png) no-repeat 50%;
+        background-size: contain;
+      }
     }
 
     &__video {
       transform: scale(.8) rotateX(-1deg) rotateY(-20deg) rotate(1deg) translateX(100px) translateY(0)!important;
+    }
+
+    &__subtitle_second {
+      margin-bottom: 180px;
+    }
+
+    &__tablet-phone {
+      position: absolute;
+      top: -160px;
+      left: 5%;
+      display: block;
+      width: 90%;
+      height: auto;
     }
   }
 
