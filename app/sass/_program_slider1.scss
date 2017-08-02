@@ -1,24 +1,35 @@
 .slider1 {
+  position: relative;
   padding-top: 70px;
+  background-color: $pale-grey-three;
+
+  &::after {
+    @extend %skew__bottom;
+    background-color: $white;
+    bottom: -70px;
+    z-index: 0;
+  }
 
   &__wrapper {
-    min-height: 107px;
+    min-height: 160px;
   }
 
   & .swiper-container {
-    min-height: 107px;
+    min-height: 160px;
   }
 
   & .swiper-pagination {
     width: 80% !important;
     height: auto !important;
     left: 50% !important;
+    top: 0;
     margin-left: -40%;
     display: flex;
     justify-content: space-between;
   }
 
   & .swiper-pagination-bullet {
+    position: relative;
     height: 97px;
     width: 20%;
     background-color: transparent !important;
@@ -27,26 +38,61 @@
     background-size: 83px auto;
     background-position: center;
     opacity: 1 !important;
+
+    &::after {
+      content: 'Fitness';
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%, 0);
+      bottom: -40px;
+      font-family: FuturaTEE;
+      text-transform: uppercase;
+      font-size: 14px;
+      font-weight: bold;
+    }
   }
 
   & .swiper-pagination-bullet:nth-child(2) {
     background-image: url("../img/unused_program/combined-shape2.png");
+
+    &::after {
+      content: 'Nutrition';
+    }
   }
 
   & .swiper-pagination-bullet:nth-child(3) {
     background-image: url("../img/unused_program/combined-shape3.png");
+
+    &::after {
+      content: 'Motivation';
+    }
   }
 
   & .swiper-pagination-bullet:nth-child(4) {
     background-image: url("../img/unused_program/combined-shape.png");
+
+    &::after {
+      content: 'Tracking';
+    }
   }
 
   & .swiper-pagination-bullet:nth-child(5) {
     background-image: url("../img/unused_program/group-16.png");
+
+    &::after {
+      content: 'Guidance';
+    }
   }
 
   & .swiper-pagination-bullet .swiper-pagination-bullet-active {
     background-size: 83px auto;
+  }
+
+  & .swiper-pagination-bullet .swiper-pagination-bullet-active::after {
+      content: 'Fitness !';
+      bottom: -35px;
+      padding-bottom: 13px;
+      border-bottom: 2px solid black;
   }
 
   & .swiper-pagination-bullet .swiper-pagination-bullet-active:nth-child(2) {
@@ -81,5 +127,120 @@
     line-height: 1.17;
     text-align: center;
     color: $gunmetal;
+  }
+
+  &__slide-wrapper {
+    margin-top: 250px;
+  }
+
+  &__text-block {
+    position: relative;
+    z-index: 2;
+    margin-left: auto;
+    margin-right: 80px;
+    margin-bottom: 34px;
+    width: 571px;
+    padding: 26px 52px 60px 33px;
+    border-radius: 3px;
+    background-color: $white;
+    box-shadow: 0 15px 35px 0 $transparent-2, 0 5px 15px 0 rgba(0, 0, 0, 0.07);
+  }
+
+  &__slide-title {
+    margin-bottom: 0;
+    font-family: eurostile-extended;
+    font-size: 32px;
+    line-height: 1.69;
+    color: $black;
+    text-transform: uppercase;
+  }
+
+  &__slide-subtitle {
+    margin-bottom: 0;
+    height: 54px;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 3.86;
+    color: $aqua-marine;
+    text-transform: uppercase;
+  }
+
+  &__slide-desc {
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: 0.5px;
+    color: $gunmetal;
+  }
+
+  &__slide-img {
+    position: absolute;
+    z-index: 0;
+    right: 50%;
+    bottom: 90px;
+    width: 457px;
+    height: 305px;
+  }
+}
+
+@media (max-width: $sm) {
+  .swiper-slide.slider1__slide-wrapper {
+    width: 60%;
+  }
+
+  .slider1 {
+    padding-top: 20px;
+
+    &__desc {
+      margin-bottom: 50px;
+    }
+
+    &__slide-img {
+      display: none;
+    }
+
+    &__slide-wrapper {
+      margin-top: 180px;
+      margin-right: 20px;
+    }
+
+    &__text-block {
+      margin-right: auto;
+      padding: 26px 59px 50px 59px;
+      text-align: center;
+    }
+  }
+}
+
+@media (max-width: $xs) {
+  .slider1 {
+    & .swiper-pagination {
+      margin-left: 0;
+      left: 5%!important;
+      width: 90%!important;
+    }
+
+    & .swiper-pagination-bullet {
+      height: 70px;
+      background-size: 48px auto;
+
+      &::after {
+        bottom: -20px;
+        font-size: 10px;
+      }
+    }
+
+    &__desc {
+      width: 90%;
+      margin-bottom: 10px;
+    }
+
+    &__slide-wrapper {
+      margin-top: 120px;
+    }
+
+    &__text-block {
+      padding: 19px 18px 30px;
+      width: 90%;
+    }
   }
 }

@@ -114,6 +114,25 @@
       background: url('../img/program-play.svg') no-repeat center;
       background-size: cover;
     }
+
+    &:hover {
+      cursor: po
+    }
+  }
+
+  &__video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    padding-top: 25px;
+    height: 0;
+  }
+
+  &__video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
   }
 }
 
@@ -161,12 +180,12 @@
 
     &__inner {
       padding-top: 254px;
-      width: 85%;
+      width: 86%;
       margin: 0 auto;
     }
 
     &__trainer {
-      width: 23%;
+      width: 25%;
       margin-right: 5px;
     }
 
@@ -178,7 +197,7 @@
       top: -254px;
       height: 254px;
       width: auto;
-      left: 50%;
+      left: 31%;
     }
   }
 }

@@ -28,12 +28,15 @@
   }
 
   &__text-block {
-    padding: 45px 41px 136px 45px;
+    position: relative;
+    z-index: 2;
+    padding: 45px 41px 80px 45px;
     margin-top: 47px;
     margin-left: auto;
     margin-right: 200px;
     width: 433px;
     box-shadow: $shadow;
+    background: white;
   }
 
   &__text {

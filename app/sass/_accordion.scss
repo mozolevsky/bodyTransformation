@@ -17,14 +17,18 @@
   }
 
   &__see-more {
-    display: none;
+    display: block;
     margin-top: 23px;
-    margin-bottom: 23px;
+    margin-bottom: 70px;
     font-size: 18px;
     font-weight: 600;
     line-height: 1.39;
     text-align: center;
     color: $gunmetal;
+
+    &:hover {
+      cursor: pointer;
+    }
   }
 }
 

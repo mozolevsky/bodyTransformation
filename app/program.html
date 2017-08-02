@@ -23,36 +23,6 @@
                 <img src="./img/logo-header.svg" alt="" class="header__logo-img">
             </picture>
         </a>
-
-        <div class="header__nav-wrapper">
-            <nav class="header__nav">
-                <a href="#" class="header__nav-link">About Us</a>
-                <a href="#" class="header__nav-link">Free tools</a>
-                <a href="#" class="header__nav-link">Program</a>
-                <a href="#" class="header__nav-link">The Team</a>
-                <a href="#" class="header__nav-link">Blog</a>
-            </nav>
-            <a href="#" class="header__btn">Start here</a>
-        </div>
-
-        <nav id="my-menu">
-            <ul>
-                <li><a href="#">About us</a></li>
-                <li><a href="#">Free tools</a></li>
-                <li><a href="#">Program</a></li>
-                <li><a href="#">The team</a></li>
-                <li><a href="#">Blog</a></li>
-                <li><a href="#">Start here</a></li>
-            </ul>
-        </nav>
-
-        <a href="#my-menu">
-            <div class="header__burger">
-                <div class="header__burger-dash header__burger-dash__top header__burger-dash_light"></div>
-                <div class="header__burger-dash header__burger-dash__middle header__burger-dash_light"></div>
-                <div class="header__burger-dash header__burger-dash__bottom header__burger-dash_light"></div>
-            </div>
-        </a>
     </header>
 
     <section class="program-top">
@@ -71,11 +41,17 @@
             </div>
         </div>
         <div class="program-top__right">
-            <section class="program-top__text-right">
+            <!--<section class="program-top__text-right">
                 <span class="program-top__tagline program-top__tagline_first"><i class="program-top__tagline_small">Your</i> body</span><br>
                 <span class="program-top__tagline program-top__tagline_second">Transformation</span><br>
                 <span class="program-top__tagline program-top__tagline_third">Achieved</span><br>
-            </section>
+            </section>-->
+            <div class="program-top__video-wrapper">
+                <video class="program-top__video" autoplay>
+                    <source src="video/small2.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
         </div>
     </section>
 
@@ -84,7 +60,12 @@
             <div class="row">
                 <div class="info__img-block col-md-6 col-sm-6 col-xs-12">
                     <h3 class="info__title info__title-img">87% Of People Who Wish To Transform Their Bodies Fail…</h3>
-                    <img class="info__img" src="img/unused_program/pie-chart@2x.png" alt="pie-chart">
+                    <picture>
+                        <source srcset="img/unused_program/pie-chart.png" media="(max-width: 991px)">
+                        <img class="info__img"
+                             src="img/unused_program/pie-chart@2x.png"
+                             alt="pie-chart">
+                    </picture>
                 </div>
                 <div class="info__content info__content_margin col-md-6 col-sm-6 col-xs-12">
                     <h3 class="info__title info__title-text">87% Of People Who Wish To Transform Their Bodies Fail…</h3>
@@ -136,23 +117,81 @@
         <div class="container">
             <div class="row">
                 <div class="slider1__inner">
-                    <h1 class="slider1__title">The Only Home Body Transformation System Which Includes All 5 Building Blocks</h1>
+                    <h3 class="slider1__title">The Only Home Body Transformation System Which Includes All 5 Building Blocks</h3>
                     <p class="slider1__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ut nisi mollis,
                         dictum ex at, volutpat nislnulla posuere gravida.
                     </p>
                     <div class="slider1__wrapper">
-                        <div class="swiper-container">
+                        <div class="swiper-container swiper-program1">
                             <div class="swiper-wrapper">
-                                <div class="swiper-slide">Slide 1</div>
-                                <div class="swiper-slide">Slide 2</div>
-                                <div class="swiper-slide">Slide 3</div>
-                                <div class="swiper-slide">Slide 4</div>
-                                <div class="swiper-slide">Slide 5</div>
+                                <div class="swiper-slide slider1__slide-wrapper" data-name="Fitness">
+                                    <div class="slider1__text-block">
+                                        <p class="slider1__slide-title">TRACKING</p>
+                                        <p class="slider1__slide-subtitle">building block</p>
+                                        <p class="slider1__slide-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ut nisi mollis,
+                                            dictum ex at, volutpat nisl. Cras at ligula ac nulla posuere gravida eu vitae mi.
+                                            Cras convallis viverra egestas. Mauris erat libero, placerat quis hendrerit eget,
+                                            faucibus eget urna.
+                                        </p>
+                                    </div>
+                                    <img src="img/bitmap.png" srcset="img/bitmap@2x.png 2x" alt="" class="slider1__slide-img">
+                                </div>
+                                <div class="swiper-slide slider1__slide-wrapper" data-name="Nutrition">
+                                    <div class="slider1__text-block">
+                                        <p class="slider1__slide-title">TRACKING</p>
+                                        <p class="slider1__slide-subtitle">building block</p>
+                                        <p class="slider1__slide-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ut nisi mollis,
+                                            dictum ex at, volutpat nisl. Cras at ligula ac nulla posuere gravida eu vitae mi.
+                                            Cras convallis viverra egestas. Mauris erat libero, placerat quis hendrerit eget,
+                                            faucibus eget urna.
+                                        </p>
+                                    </div>
+                                    <img src="img/bitmap.png" srcset="img/bitmap@2x.png 2x" alt="" class="slider1__slide-img">
+                                </div>
+                                <div class="swiper-slide slider1__slide-wrapper" data-name="Motivation">
+                                    <div class="slider1__text-block">
+                                        <p class="slider1__slide-title">TRACKING</p>
+                                        <p class="slider1__slide-subtitle">building block</p>
+                                        <p class="slider1__slide-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ut nisi mollis,
+                                            dictum ex at, volutpat nisl. Cras at ligula ac nulla posuere gravida eu vitae mi.
+                                            Cras convallis viverra egestas. Mauris erat libero, placerat quis hendrerit eget,
+                                            faucibus eget urna.
+                                        </p>
+                                    </div>
+                                    <img src="img/bitmap.png" srcset="img/bitmap@2x.png 2x" alt="" class="slider1__slide-img">
+                                </div>
+                                <div class="swiper-slide slider1__slide-wrapper" data-name="Tracking">
+                                    <div class="slider1__text-block">
+                                        <p class="slider1__slide-title">TRACKING</p>
+                                        <p class="slider1__slide-subtitle">building block</p>
+                                        <p class="slider1__slide-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ut nisi mollis,
+                                            dictum ex at, volutpat nisl. Cras at ligula ac nulla posuere gravida eu vitae mi.
+                                            Cras convallis viverra egestas. Mauris erat libero, placerat quis hendrerit eget,
+                                            faucibus eget urna.
+                                        </p>
+                                    </div>
+                                    <img src="img/bitmap.png" srcset="img/bitmap@2x.png 2x" alt="" class="slider1__slide-img">
+                                </div>
+                                <div class="swiper-slide slider1__slide-wrapper" data-name="Guidance">
+                                    <div class="slider1__text-block">
+                                        <p class="slider1__slide-title">TRACKING</p>
+                                        <p class="slider1__slide-subtitle">building block</p>
+                                        <p class="slider1__slide-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ut nisi mollis,
+                                            dictum ex at, volutpat nisl. Cras at ligula ac nulla posuere gravida eu vitae mi.
+                                            Cras convallis viverra egestas. Mauris erat libero, placerat quis hendrerit eget,
+                                            faucibus eget urna.
+                                        </p>
+                                    </div>
+                                    <img src="img/bitmap.png" srcset="img/bitmap@2x.png 2x" alt="" class="slider1__slide-img">
+                                </div>
                             </div>
-                            <div class="swiper-pagination"></div>
+                            <div class="swiper-pagination swiper-program1__nav">
+                                <span class="swiper-pagination-bullet swiper-pagination-bullet-active"></span>
+                            </div>
                     </div>
                 </div>
             </div>
+        </div>
         </div>
     </section>
 
@@ -160,13 +199,16 @@
         <div class="round-diagram__container container">
             <h3 class="info__title round-diagram__title">A Body Transformation System Backed By Science</h3>
             <div class="row">
-                <div class="round-diagram__img-block col-md-8 col-sm-6">
+                <div class="round-diagram__img-block col-lg-8 col-md-9 col-sm-6">
                     <picture>
-                        <source srcset="img/unused_program/pie-chart-2@2x.png" media="(max-width: 991px)">
-                        <img class="round-diagram__img-main" src="img/unused_program/group-71.png" alt="pie-chart">
+                        <source srcset="img/unused_program/tablet_2_pie-chart-science.png" media="(max-width: 991px)">
+                        <img class="round-diagram__img-main"
+                             src="img/unused_program/group-71.png"
+                             srcset="img/unused_program/group-71@2x.png 2x"
+                             alt="pie-chart">
                     </picture>
                 </div>
-                <div class="round-diagram__text-block col-md-4 col-sm-6">
+                <div class="round-diagram__text-block col-lg-4 col-md-3 col-sm-6">
                     <h4 class="round-diagram__text-title">HIIT Training Garantees Maximum Efficiency To Burning Fat</h4>
                     <p class="round-diagram__text">In this program we will perform repeated bouts of high intensity effort
                         followed by varied recovery times in order to achieve the effects of HIIT training.
@@ -179,7 +221,7 @@
     <section class="horizontal-diagram">
         <div class="horizontal-diagram__container container">
             <div class="row horizontal-diagram__row">
-                <div class="horizontal-diagram__text-block col-md-4 col-sm-6 col-xs-12">
+                <div class="horizontal-diagram__text-block col-md-4 col-sm-4 col-xs-12">
                     <h4 class="horizontal-diagram__text-block-title">HIIT Training Garantees Maximum Efficiency To Burning Fat</h4>
                     <p class="horizontal-diagram__text">The first key to this program is high intensity interval
                         training, also known as HIIT. This style of training has been shown to improve aerobic and
@@ -187,8 +229,13 @@
                         profiles and lower body fat while
                     </p>
                 </div>
-                <div class="horizontal-diagram__img-block col-md-8 col-sm-6 col-xs-12">
-                    <img class="horizontal-diagram__img" src="img/unused_program/graph@2x.png" alt="graph">
+                <div class="horizontal-diagram__img-block col-md-8 col-sm-8 col-xs-12">
+                    <picture>
+                        <source srcset="img/unused_program/tablet_3_hiit-chart.png" media="(max-width: 991px)">
+                        <img class="horizontal-diagram__img"
+                             src="img/unused_program/graph@2x.png"
+                             alt="graph">
+                    </picture>
                 </div>
             </div>
         </div>
@@ -204,8 +251,11 @@
                 </div>
             </div>
             <div class="adv-system__graph">
-                <img class="adv-system__graph-arrow" src="img/unused_program/group-77.png">
-                <div class="adv-system__graph-container container">
+                <picture>
+                    <source srcset="img/unused_program/tablet_4_caption-arrow.png" media="(max-width: 991px)">
+                    <img src="img/unused_program/group-77.png" srcset="img/unused_program/group-77@2x.png 2x" alt="graph" class="adv-system__graph-arrow">
+                </picture>
+                 <div class="adv-system__graph-container container">
                     <div class="adv-system__graph-item adv-system__graph-item_1">
                         <p class="adv-system__graph-text">Easy to follow and understand</p>
                         <i class="adv-system__graph-line adv-system__graph-line_1"></i>
@@ -286,7 +336,7 @@
                         Nullam eu orci hendrerit lorem aliquet blandit.
                     </p>
                     <div class="slider2__wrapper">
-                        <div class="swiper-container">
+                        <div class="swiper-container swiper-program2">
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide">
                                     <div class="slider2__text-block">
@@ -412,7 +462,7 @@
                         <div class="trainers__text">
                             <p class="trainers__name">Jill</p>
                             <p class="trainers__spec">Body Transformation Specialist</p>
-                            <a href="#" class="trainers__link">About Jill</a>
+                            <a class="trainers__link"  data-toggle="modal" data-target="#trainer-info1">About Jill</a>
                         </div>
                         <img src="img/program-trianer-1.png" alt="" class="trainers__img trainers__img_one">
                     </div>
@@ -420,7 +470,7 @@
                         <div class="trainers__text">
                             <p class="trainers__name">Chris</p>
                             <p class="trainers__spec">Body Transformation Specialist</p>
-                            <a href="#" class="trainers__link">About Chris</a>
+                            <a class="trainers__link" data-toggle="modal" data-target="#trainer-info2">About Chris</a>
                         </div>
                         <img src="img/program-trainer-2.png" alt="" class="trainers__img trainers__img_two">
                     </div>
@@ -428,7 +478,7 @@
                         <div class="trainers__text">
                             <p class="trainers__name">Breean</p>
                             <p class="trainers__spec">Body Transformation Specialist</p>
-                            <a href="#" class="trainers__link">About Breean</a>
+                            <a class="trainers__link" data-toggle="modal" data-target="#trainer-info3">About Breean</a>
                         </div>
                         <img src="img/program-trainer-3.png" alt="" class="trainers__img trainers__img_three">
                     </div>
@@ -436,7 +486,7 @@
                         <div class="trainers__text">
                             <p class="trainers__name">Ian</p>
                             <p class="trainers__spec">Body Transformation Specialist</p>
-                            <a href="#" class="trainers__link">About Ian</a>
+                            <a class="trainers__link" data-toggle="modal" data-target="#trainer-info4">About Ian</a>
                         </div>
                         <img src="img/program-trainer-4.png" alt="" class="trainers__img trainers__img_four">
                     </div>
@@ -504,20 +554,20 @@
                     <div class="faq__accordion">
                         <div id="integration-list">
                             <ul>
-                                <li>
-                                    <a class="expand">
-                                        <div>
-                                            <span>1. How do I know if this program is for me (sample)?</span>
-                                        </div>
-                                    </a>
-                                    <div class="detail">
-                                        <p class="faq__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias consequatur
-                                            dolorum ducimus ea error incidunt itaque similique temporibus voluptatibus?
-                                            Ad dicta, exercitationem hic incidunt laborum nemo nulla placeat quis
-                                            sequi!</p>
+                            <li>
+                                <a class="expand">
+                                    <div>
+                                        <span>1. How do I know if this program is for me (sample)?</span>
                                     </div>
-                                </li>
-                                <li>
+                                </a>
+                                <div class="detail">
+                                    <p class="faq__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias consequatur
+                                        dolorum ducimus ea error incidunt itaque similique temporibus voluptatibus?
+                                        Ad dicta, exercitationem hic incidunt laborum nemo nulla placeat quis
+                                        sequi!</p>
+                                </div>
+                            </li>
+                            <li>
                                 <a class="expand">
                                     <span>2. Duis nec arcu imperdiet, volutpat sapien vitae, sodales sem. Aenean id velit sollicitudin, auctor dolor at, egestas nunc?</span>
                                 </a>
@@ -528,67 +578,148 @@
                                         voluptates.</p>
                                 </div>
                             </li>
-                                <li>
-                                    <a class="expand">
-                                        <span>3. Etiam efficitur ipsum sed tincidunt hendrerit. Quisque pulvinar sapien nisi, at viverra lacus blandit vel?</span>
-                                    </a>
-                                    <div class="detail">
-                                        <p class="faq__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus adipisci
-                                            alias consectetur consequatur cum dicta doloremque ea eos in ipsa, laborum
-                                            magnam necessitatibus nisi porro quia quibusdam sunt voluptate
-                                            voluptates.</p>
+                            <li>
+                                <a class="expand">
+                                    <span>3. Etiam efficitur ipsum sed tincidunt hendrerit. Quisque pulvinar sapien nisi, at viverra lacus blandit vel?</span>
+                                </a>
+                                <div class="detail">
+                                    <p class="faq__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus adipisci
+                                        alias consectetur consequatur cum dicta doloremque ea eos in ipsa, laborum
+                                        magnam necessitatibus nisi porro quia quibusdam sunt voluptate
+                                        voluptates.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <a class="expand">
+                                    <span>4. Fusce tellus lacus, efficitur sit amet ultrices et, posuere nec est. Morbi consequat urna sed arcu pretium, sit amet rhoncus justo?</span>
+                                </a>
+                                <div class="detail">
+                                    <p class="faq__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus adipisci
+                                        alias consectetur consequatur cum dicta doloremque ea eos in ipsa, laborum
+                                        magnam necessitatibus nisi porro quia quibusdam sunt voluptate
+                                        voluptates.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <a class="expand">
+                                    <span>5. Sed ultricies nisi sit amet felis ultrices, sed mollis mauris faucibus. Sed sit amet tristique tortor, sit amet imperdiet odio?</span>
+                                </a>
+                                <div class="detail">
+                                    <p class="faq__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus adipisci
+                                        alias consectetur consequatur cum dicta doloremque ea eos in ipsa, laborum
+                                        magnam necessitatibus nisi porro quia quibusdam sunt voluptate
+                                        voluptates.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <a class="expand">
+                                    <span>6. Fusce tellus lacus, efficitur sit amet ultrices et, posuere nec est. Morbi consequat urna sed arcu pretium, sit amet rhoncus justo?</span>
+                                </a>
+                                <div class="detail">
+                                    <p class="faq__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus adipisci
+                                        alias consectetur consequatur cum dicta doloremque ea eos in ipsa, laborum
+                                        magnam necessitatibus nisi porro quia quibusdam sunt voluptate
+                                        voluptates.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <a class="expand">
+                                    <span>7. Fusce tellus lacus, efficitur sit amet ultrices et, posuere nec est. Morbi consequat urna sed arcu pretium, sit amet rhoncus justo?</span>
+                                </a>
+                                <div class="detail">
+                                    <p class="faq__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus adipisci
+                                        alias consectetur consequatur cum dicta doloremque ea eos in ipsa, laborum
+                                        magnam necessitatibus nisi porro quia quibusdam sunt voluptate
+                                        voluptates.</p>
+                                </div>
+                            </li>
+                        </ul>
+                            <ul id="faq-second-list">
+                            <li>
+                                <a class="expand">
+                                    <div>
+                                        <span>8. How do I know if this program is for me (sample)?</span>
                                     </div>
-                                </li>
-                                <li>
-                                    <a class="expand">
-                                        <span>4. Fusce tellus lacus, efficitur sit amet ultrices et, posuere nec est. Morbi consequat urna sed arcu pretium, sit amet rhoncus justo?</span>
-                                    </a>
-                                    <div class="detail">
-                                        <p class="faq__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus adipisci
-                                            alias consectetur consequatur cum dicta doloremque ea eos in ipsa, laborum
-                                            magnam necessitatibus nisi porro quia quibusdam sunt voluptate
-                                            voluptates.</p>
-                                    </div>
-                                </li>
-                                <li>
-                                    <a class="expand">
-                                        <span>5. Sed ultricies nisi sit amet felis ultrices, sed mollis mauris faucibus. Sed sit amet tristique tortor, sit amet imperdiet odio?</span>
-                                    </a>
-                                    <div class="detail">
-                                        <p class="faq__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus adipisci
-                                            alias consectetur consequatur cum dicta doloremque ea eos in ipsa, laborum
-                                            magnam necessitatibus nisi porro quia quibusdam sunt voluptate
-                                            voluptates.</p>
-                                    </div>
-                                </li>
-                                <li>
-                                    <a class="expand">
-                                        <span>6. Fusce tellus lacus, efficitur sit amet ultrices et, posuere nec est. Morbi consequat urna sed arcu pretium, sit amet rhoncus justo?</span>
-                                    </a>
-                                    <div class="detail">
-                                        <p class="faq__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus adipisci
-                                            alias consectetur consequatur cum dicta doloremque ea eos in ipsa, laborum
-                                            magnam necessitatibus nisi porro quia quibusdam sunt voluptate
-                                            voluptates.</p>
-                                    </div>
-                                </li>
-                                <li>
-                                    <a class="expand">
-                                        <span>7. Fusce tellus lacus, efficitur sit amet ultrices et, posuere nec est. Morbi consequat urna sed arcu pretium, sit amet rhoncus justo?</span>
-                                    </a>
-                                    <div class="detail">
-                                        <p class="faq__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus adipisci
-                                            alias consectetur consequatur cum dicta doloremque ea eos in ipsa, laborum
-                                            magnam necessitatibus nisi porro quia quibusdam sunt voluptate
-                                            voluptates.</p>
-                                    </div>
-                                </li>
-                             </ul>
+                                </a>
+                                <div class="detail">
+                                    <p class="faq__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias consequatur
+                                        dolorum ducimus ea error incidunt itaque similique temporibus voluptatibus?
+                                        Ad dicta, exercitationem hic incidunt laborum nemo nulla placeat quis
+                                        sequi!</p>
+                                </div>
+                            </li>
+                            <li>
+                                <a class="expand">
+                                    <span>9. Duis nec arcu imperdiet, volutpat sapien vitae, sodales sem. Aenean id velit sollicitudin, auctor dolor at, egestas nunc?</span>
+                                </a>
+                                <div class="detail">
+                                    <p class="faq__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus adipisci
+                                        alias consectetur consequatur cum dicta doloremque ea eos in ipsa, laborum
+                                        magnam necessitatibus nisi porro quia quibusdam sunt voluptate
+                                        voluptates.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <a class="expand">
+                                    <span>10. Etiam efficitur ipsum sed tincidunt hendrerit. Quisque pulvinar sapien nisi, at viverra lacus blandit vel?</span>
+                                </a>
+                                <div class="detail">
+                                    <p class="faq__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus adipisci
+                                        alias consectetur consequatur cum dicta doloremque ea eos in ipsa, laborum
+                                        magnam necessitatibus nisi porro quia quibusdam sunt voluptate
+                                        voluptates.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <a class="expand">
+                                    <span>11. Fusce tellus lacus, efficitur sit amet ultrices et, posuere nec est. Morbi consequat urna sed arcu pretium, sit amet rhoncus justo?</span>
+                                </a>
+                                <div class="detail">
+                                    <p class="faq__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus adipisci
+                                        alias consectetur consequatur cum dicta doloremque ea eos in ipsa, laborum
+                                        magnam necessitatibus nisi porro quia quibusdam sunt voluptate
+                                        voluptates.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <a class="expand">
+                                    <span>12. Sed ultricies nisi sit amet felis ultrices, sed mollis mauris faucibus. Sed sit amet tristique tortor, sit amet imperdiet odio?</span>
+                                </a>
+                                <div class="detail">
+                                    <p class="faq__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus adipisci
+                                        alias consectetur consequatur cum dicta doloremque ea eos in ipsa, laborum
+                                        magnam necessitatibus nisi porro quia quibusdam sunt voluptate
+                                        voluptates.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <a class="expand">
+                                    <span>13. Fusce tellus lacus, efficitur sit amet ultrices et, posuere nec est. Morbi consequat urna sed arcu pretium, sit amet rhoncus justo?</span>
+                                </a>
+                                <div class="detail">
+                                    <p class="faq__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus adipisci
+                                        alias consectetur consequatur cum dicta doloremque ea eos in ipsa, laborum
+                                        magnam necessitatibus nisi porro quia quibusdam sunt voluptate
+                                        voluptates.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <a class="expand">
+                                    <span>14. Fusce tellus lacus, efficitur sit amet ultrices et, posuere nec est. Morbi consequat urna sed arcu pretium, sit amet rhoncus justo?</span>
+                                </a>
+                                <div class="detail">
+                                    <p class="faq__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus adipisci
+                                        alias consectetur consequatur cum dicta doloremque ea eos in ipsa, laborum
+                                        magnam necessitatibus nisi porro quia quibusdam sunt voluptate
+                                        voluptates.</p>
+                                </div>
+                            </li>
+                        </ul>
                         </div>
                     </div>
                 </div>
             </div>
-            <a class="faq__see-more" href="#">See more</a>
+            <a class="faq__see-more" id="see-more">See more</a>
         </div>
     </section>
 
@@ -610,7 +741,10 @@
                 </p>
                 <div class="decision__block-btn">
                     <button class="decision__btn">Get Started Today</button>
-                    <img class="decision__block-arrow" src="img/unused_program/group-81.png" alt="decision-arrow">
+                    <img class="decision__block-arrow"
+                         src="img/unused_program/group-81.png"
+                         srcset="img/unused_program/group-81@2x.png 2x"
+                         alt="decision-arrow">
                 </div>
             </div>
         </div>
@@ -630,10 +764,95 @@
         </nav>
     </footer>
 
+    <!-- Modal 1 -->
+    <div id="trainer-info1" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">JILL</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="trainers__video-wrapper">
+                        <iframe class="trainers__video" src="https://www.youtube.com/embed/jgWnccjXR4I" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 2 -->
+    <div id="trainer-info2" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">CHRIS</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="trainers__video-wrapper">
+                        <iframe class="trainers__video" src="https://www.youtube.com/embed/jgWnccjXR4I" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Modal 3 -->
+    <div id="trainer-info3" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">BREEAN</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="trainers__video-wrapper">
+                        <iframe class="trainers__video" src="https://www.youtube.com/embed/jgWnccjXR4I" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 4 -->
+    <div id="trainer-info4" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">IAN</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="trainers__video-wrapper">
+                        <iframe class="trainers__video" src="https://www.youtube.com/embed/jgWnccjXR4I" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
 <script src="libs/vue/dist/vue.min.js"></script>
 <script src="libs/jquery/dist/jquery.min.js"></script>
+<script src="libs/bootstrap/dist/js/bootstrap.min.js"></script>
 <script src="libs/mmenu/jquery.mmenu.js" type="text/javascript"></script>
 <script type="text/javascript">
     $(document).ready(function() {
@@ -647,41 +866,49 @@
         });
     });
 </script>
-<script src="js/frombox.js"></script>
 <script src="js/scripts.js"></script>
 
 <!-- Swiper JS -->
 <script src="libs/swiper/dist/js/swiper.js"></script>
+<script src="js/frombox.js"></script>
 
-<!-- Initialize Swiper -->
 <script>
-    var swiper = new Swiper('.swiper-container', {
-        pagination: '.swiper-pagination',
+    var swiperProgram1 = new Swiper('.swiper-program1', {
+        pagination: '.swiper-program1__nav',
         paginationClickable: true,
         centeredSlides: true,
-        paginationCustomRender: function(swiper, current, total) {
-            var names = [];
-            $(".swiper-wrapper .swiper-slide").each(function(i) {
-                names.push($(this).data("name"));
-            });
-            var text = "<span style='background-color:black;padding:20px;'>";
-            for (let i = 1; i <= total; i++) {
-                if (current == i) {
-                    text += "<span style='border-top:1px solid green;margin-right:4px;color:green;padding:10px;'>" + names[i] + "</span>";
-                } else {
-                    text += "<span style='border-top:1px solid white;margin-right:4px;color:white;padding:10px;'>" + names[i] + "</span>";
-                }
-
+        breakpoints: {
+             // when window width is <= 480px
+            767: {
+                slidesPerView: 1,
+                spaceBetween: 20
+            },
+            // when window width is <= 640px
+            991: {
+                slidesPerView: 1,
+                centeredSlides: true,
+                spaceBetween: 20
             }
-            text += "</span>";
-            return text;
         }
+    });
+    swiperProgram1.slideTo(3);
+
+
+    var swiperProgram2 = new Swiper('.swiper-program2', {
+        pagination: '.swiper-pagination',
+        paginationClickable: true,
+        centeredSlides: true
     });
 
     $(function() {
         $(".expand").on( "click", function() {
             $(this).next().slideToggle(200);
          });
+    });
+
+    $("#see-more").click(function(){
+        $("#faq-second-list").show();
+        $("#see-more").hide();
     });
 </script>
 </body>
