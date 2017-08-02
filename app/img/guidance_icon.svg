@@ -1,14 +1,14 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg width="172px" height="199px" viewBox="0 0 172 199" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="104px" height="119px" viewBox="0 0 104 119" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch -->
-    <title>guidance</title>
+    <title>bg copy 10</title>
     <desc>Created with Sketch.</desc>
     <defs>
         <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
             <stop stop-color="#B76AFF" offset="0%"></stop>
             <stop stop-color="#8645E8" offset="100%"></stop>
         </linearGradient>
-        <path d="M40.0831906,0.415047264 C41.031202,-0.141521237 42.5790541,-0.135167822 43.5162436,0.415047264 L81.8829078,22.9397519 C82.8309192,23.4963204 83.5994343,24.8412883 83.5994343,25.9476378 L83.5994343,71.0278138 C83.5994343,72.1324548 82.8200973,73.4854846 81.8829078,74.0356997 L43.5162436,96.5604043 C42.5682322,97.1169729 41.0203802,97.1106194 40.0831906,96.5604043 L1.71652648,74.0356997 C0.768515084,73.4791312 -1.7283952e-12,72.1341633 -1.7283952e-12,71.0278138 L-1.75504056e-12,25.9476378 C-1.75504056e-12,24.8429968 0.77933695,23.489967 1.71652648,22.9397519 L40.0831906,0.415047264 Z" id="path-2"></path>
+        <path d="M40.0831906,0.415047264 C41.031202,-0.141521237 42.5790541,-0.135167822 43.5162436,0.415047264 L81.8829078,22.9397519 C82.8309192,23.4963204 83.5994343,24.8412883 83.5994343,25.9476378 L83.5994343,71.0278138 C83.5994343,72.1324548 82.8200973,73.4854846 81.8829078,74.0356997 L43.5162436,96.5604043 C42.5682322,97.1169729 41.0203802,97.1106194 40.0831906,96.5604043 L1.71652648,74.0356997 C0.768515084,73.4791312 2.66453526e-14,72.1341633 2.66453526e-14,71.0278138 L0,25.9476378 C0,24.8429968 0.77933695,23.489967 1.71652648,22.9397519 L40.0831906,0.415047264 Z" id="path-2"></path>
         <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-3">
             <feOffset dx="0" dy="12" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
             <feGaussianBlur stdDeviation="5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
@@ -62,9 +62,9 @@
         </filter>
     </defs>
     <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g>
-            <g transform="translate(44.000000, 51.000000)">
-                <g>
+        <g transform="translate(-981.000000, -131.000000)">
+            <g transform="translate(958.000000, 131.000000)">
+                <g transform="translate(33.000000, 0.000000)">
                     <g>
                         <use fill="black" fill-opacity="1" filter="url(#filter-3)" xlink:href="#path-2"></use>
                         <use fill="url(#linearGradient-1)" fill-rule="evenodd" xlink:href="#path-2"></use>

@@ -127,8 +127,10 @@
 
   &_fourth {
     padding-top: 92px;
-    background: url('../img/tracking-bg.png') no-repeat center;
-    background-size: cover;
+    background-image: url('../img/tracking-bg_arrow.png'), url('../img/tracking-bg.jpg');
+    background-repeat: no-repeat;
+    background-position: 13vw 667px, center;
+    background-size: 320px 140px, cover;
 
     &::after {
       content: none;
@@ -369,6 +371,12 @@
     margin-bottom: 0;
     height: 54px;
     width: 157px;
+  }
+
+  &__main-icon_plus-bonus {
+    margin-bottom: 0;
+    height: auto;
+    width: 236px;
   }
 
   &__small-icon {
@@ -721,6 +729,13 @@
 }
 
 @media (max-width: 1199px) {
+  .wyg-module {
+    &_fourth {
+      background-position: 3vw 720px,50%;
+      background-size: 320px 140px, cover;
+    }
+  }
+
   .wyg-section {
     &__tip-block {
       padding-left: 0;
@@ -781,7 +796,7 @@
     }
 
     &_first {
-      padding-bottom: 272px;
+      padding-bottom: 64px;
     }
 
     &_second {
@@ -818,8 +833,8 @@
       padding-top: 75px;
       padding-bottom: 250px;
 
-      background-position: 0 100%;
-      background-size: 113% 57%;
+      background-position: center 97%, 0 100%;
+      background-size: 316px auto, 113% 57%;
     }
 
     &_fifth {
@@ -1062,8 +1077,8 @@
       padding-top: 70px;
       padding-bottom: 280px;
 
-      background-position: center 95%, 0 bottom;
-      background-size: 80%, 100%;
+      background-position: center 90%, 0 bottom;
+      background-size: 60% auto, 100%;
 
       background-image: url('../img/mobile_5_tracking-caption.png'), url('../img/mobile_5_chart.png');
     }

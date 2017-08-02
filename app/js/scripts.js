@@ -37,11 +37,22 @@ let app = new Vue({
             console.log(counter);
 
             if (counter == 3) {
-                console.log('We can not push the button');
+                console.log('We can push the button');
                 this.formData.formStepOne = false;
                 counter = 0;
             } else {
                 console.log('We can not do it');
+                if (this.formData.weight == '') {
+                    this.formData.weight = 'Enter numerical data';
+                }
+
+                if (this.formData.height == '') {
+                    this.formData.height = 'Enter numerical data';
+                }
+
+                if (this.formData.age == '') {
+                    this.formData.age = 'Enter numerical data';
+                }
             }
         }
     },
