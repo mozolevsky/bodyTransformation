@@ -11,7 +11,8 @@ var gulp = require('gulp'),
     cache = require('gulp-cache'),
     autoprefixer = require('gulp-autoprefixer'),
     csscomb = require('gulp-csscomb'),
-    babel = require('gulp-babel');
+    babel = require('gulp-babel'),
+    gutil = require('gulp-util');
 
 gulp.task('sass', function() {
     return gulp.src('app/sass/main.scss')
@@ -44,6 +45,7 @@ gulp.task('es6', function() {
 gulp.task('scriptsMin', function() {
     return gulp.src('app/js/*')
         .pipe(uglify())
+        .on('error', function (err) { gutil.log(gutil.colors.red('[Error]'), err.toString()); })
         .pipe(rename({suffix: '.min'}))
         .pipe(gulp.dest('app/js'))
 });
@@ -87,7 +89,7 @@ gulp.task('img', function() {
 
 
 
-gulp.task('build', ['clean', 'img' ,'es6',  'sass', 'scriptsMin'], function() {
+gulp.task('build', ['clean', 'img','es6', 'sass', 'scriptsMin'], function() {
     var buildCss = gulp.src('app/css/**/*.css')
         .pipe(gulp.dest('dist/css'));
 
