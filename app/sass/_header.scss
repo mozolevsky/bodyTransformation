@@ -13,6 +13,9 @@
   font-size: 16px;
   letter-spacing: 0.4px;
 
+  &_light {
+    background-color: white;
+  }
 
   &__nav-wrapper {
     display: flex;

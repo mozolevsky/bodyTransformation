@@ -143,6 +143,10 @@ input {
   display: none;
 }
 
+#my-menu:not( .mm-menu ) {
+  display: none;
+}
+
 
 @media(max-width: $sm) {
   body {

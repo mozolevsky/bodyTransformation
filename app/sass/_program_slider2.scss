@@ -24,16 +24,26 @@
 
   &__wrapper {
     position: relative;
+    z-index: 2;
     width: 100%;
+  }
+
+  &__slide {
+    &::after {
+      @extend %skew__bottom;
+      bottom: -62px;
+      background-color: $pale-grey-three;
+    }
   }
 
   &__text-block {
     position: relative;
     z-index: 2;
-    padding: 45px 41px 80px 45px;
+    padding: 45px 41px 50px 45px;
     margin-top: 47px;
     margin-left: auto;
     margin-right: 200px;
+    margin-bottom: 30px;
     width: 433px;
     box-shadow: $shadow;
     background: white;
@@ -47,11 +57,11 @@
 
   &__img-block {
     position: absolute;
-    width: auto;
-    height: 497px;
-    left: 130px;
     top: 0;
-    padding-left: 70px;
+    left: 130px;
+    width: auto;
+    height: 377px;
+    padding-left: 90px;
   }
 
   &__img {
@@ -117,6 +127,13 @@
       bottom: -24px;
     }
 
+    &__slide {
+      &:after {
+        bottom: -24px;
+        height: 50px;
+      }
+    }
+
     &__desc {
       margin-bottom: 30px;
     }
@@ -131,6 +148,7 @@
     &__img-block {
       left: 70px;
       padding-left: 0;
+      height: 453px;
     }
 
     &__person-details {
@@ -170,11 +188,21 @@
       z-index: 2;
     }
 
+    &__slide {
+      width: 70%!important;
+      margin-right: 0;
+      margin-left: 0;
+
+      &::after {
+        content: none;
+      }
+    }
+
     &__text-block {
       margin-top: 321px;
       margin-bottom: 28px;
       margin-right: auto;
-      width: 80%;
+      width: 100%;
       background: $white;
     }
 

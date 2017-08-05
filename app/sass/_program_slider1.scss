@@ -30,7 +30,7 @@
 
   & .swiper-pagination-bullet {
     position: relative;
-    height: 97px;
+    height: 113px;
     width: 20%;
     background-color: transparent !important;
     background-image: url("../img/unused_program/combined-shape.png");
@@ -44,10 +44,11 @@
       position: absolute;
       left: 50%;
       transform: translate(-50%, 0);
-      bottom: -40px;
+      bottom: -25px;
       font-family: FuturaTEE;
       text-transform: uppercase;
       font-size: 14px;
+      line-height: 30px;
       font-weight: bold;
     }
   }
@@ -85,30 +86,70 @@
   }
 
   & .swiper-pagination-bullet .swiper-pagination-bullet-active {
-    background-size: 83px auto;
+    background-size: 102px auto;
+    background-position-y: 4px;
   }
 
   & .swiper-pagination-bullet .swiper-pagination-bullet-active::after {
       content: 'Fitness !';
-      bottom: -35px;
+      bottom: -20px;
       padding-bottom: 13px;
       border-bottom: 2px solid black;
   }
 
-  & .swiper-pagination-bullet .swiper-pagination-bullet-active:nth-child(2) {
+  & .swiper-pagination-bullet:nth-child(1).swiper-pagination-bullet-active {
+    background-image: url("../img/fitness_icon.svg");
+    background-size: 102px auto;
+    background-position-y: 4px;
 
+    &:after {
+      color: #5DD6BD;
+      border-bottom: 2px solid #5DD6BD;
+    }
   }
 
-  & .swiper-pagination-bullet .swiper-pagination-bullet-active:nth-child(3) {
+  & .swiper-pagination-bullet:nth-child(2).swiper-pagination-bullet-active {
+    background-image: url("../img/nutrition_icon.svg");
+    background-size: 102px auto;
+    background-position-y: 4px;
 
+    &:after {
+      color: #E34964;
+      border-bottom: 2px solid #E34964;
+    }
+  }
+
+  & .swiper-pagination-bullet:nth-child(3).swiper-pagination-bullet-active {
+    background-image: url("../img/motivation_icon.svg");
+    background-size: 102px auto;
+    background-position-y: 4px;
+
+    &:after {
+      color: #FFBC61;
+      border-bottom: 2px solid #FFBC61;
+    }
   }
 
   & .swiper-pagination-bullet:nth-child(4).swiper-pagination-bullet-active {
-    background-image: url("../img/unused_program/bg-copy-9.png");
+    background-image: url("../img/tracking_icon.svg");
+    background-size: 102px auto;
+    background-position-y: 4px;
+
+    &:after {
+      color: #58AAFB;
+      border-bottom: 2px solid #58AAFB;
+    }
   }
 
-  & .swiper-pagination-bullet .swiper-pagination-bullet-active:nth-child(5) {
+  & .swiper-pagination-bullet:nth-child(5).swiper-pagination-bullet-active {
+    background-image: url("../img/guidance_icon.svg");
+    background-size: 102px auto;
+    background-position-y: 4px;
 
+    &:after {
+      color: #B065FC;
+      border-bottom: 2px solid #B065FC;
+    }
   }
 
   &__title {
@@ -229,18 +270,47 @@
       }
     }
 
+    & .swiper-pagination-bullet:nth-child(1).swiper-pagination-bullet-active {
+      background-size: 60px auto;
+      background-position-y: 4px;
+    }
+
+    & .swiper-pagination-bullet:nth-child(2).swiper-pagination-bullet-active {
+      background-size: 60px auto;
+      background-position-y: 4px;
+    }
+
+    & .swiper-pagination-bullet:nth-child(3).swiper-pagination-bullet-active {
+      background-size: 60px auto;
+      background-position-y: 4px;
+    }
+
+    & .swiper-pagination-bullet:nth-child(4).swiper-pagination-bullet-active {
+      background-size: 60px auto;
+      background-position-y: 4px;
+    }
+
+    & .swiper-pagination-bullet:nth-child(5).swiper-pagination-bullet-active {
+      background-image: url("../img/guidance_icon.svg");
+      background-size: 60px auto;
+      background-position-y: 4px;
+    }
+
     &__desc {
-      width: 90%;
+      width: 100%;
       margin-bottom: 10px;
     }
 
     &__slide-wrapper {
       margin-top: 120px;
+      margin-right: 0;
+      margin-left: 0;
+      width: 85%!important;
     }
 
     &__text-block {
       padding: 19px 18px 30px;
-      width: 90%;
+      width: 100%;
     }
   }
 }

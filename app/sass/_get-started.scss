@@ -320,16 +320,16 @@
 
     &__img {
       height: auto;
-      width: 375px;
+      width: 100%;
     }
 
     &__info {
       position: static;
       margin-top: -25px;
-      margin-left: auto;
-      margin-right: auto;
+      margin-left: 30px;
+      margin-right: 30px;
       padding: 1px 20px 16px;
-      width: 100%;
+      width: calc(100% - 60px);
       background: $white;
       opacity: .9;
       transform: translate(0, 0);
@@ -359,15 +359,15 @@
   .promo-block {
     &__img {
       height: auto;
-      width: 375px;
+      width: 100%;
     }
 
     &__info {
-      width: 80%;
+      width: calc(100% - 60px);
       position: static;
       margin-top: -25px;
-      margin-left: auto;
-      margin-right: auto;
+      margin-left: 30px;
+      margin-right: 30px;
       padding: 1px 20px 16px;
       opacity: .9;
       background: $white;

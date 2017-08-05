@@ -13,8 +13,13 @@
   &__copy {
     padding: 0;
     margin: 0;
+    width: 250px;
+    height: 30px;
     color: $slate;
     font-weight: bold;
+    background: url('../img/grey-logo.svg') no-repeat center;
+    background-size: contain;
+
   }
 
 

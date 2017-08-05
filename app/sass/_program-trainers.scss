@@ -222,6 +222,16 @@
     &__trainer {
       margin-top: 203px;
       width: 48%;
+
+      &:nth-child(2n) {
+        width: calc(48% + 20px);
+        margin-right: -20px;
+      }
+
+      &:nth-child(2n - 1) {
+        width: calc(48% + 20px);
+        margin-left: -20px;
+      }
     }
 
     &__img {
