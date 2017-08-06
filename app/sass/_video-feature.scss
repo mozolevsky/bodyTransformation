@@ -16,14 +16,29 @@
     position: absolute;
     width: 165%;
     max-width: none;
-    top: -160px;
+    top: -120px;
     left: 65px;
     perspective: 1200px;
     perspective-origin: 80% 80%;
     z-index: 1000;
+
+    &::before {
+      position: absolute;
+      top: 150px;
+      right: 5%;
+      content: '';
+      background: url('../img/video-arrow.png') no-repeat center;
+      background-size: contain;
+      width: 323px;
+      height: 62px;
+    }
   }
 }
 
+.video-container.collapsed .video {
+  cursor: pointer;
+  transform: scale(1) rotateX(3deg) rotateY(-15deg) rotate(0deg) translateX(140px) translateY(-20px)!important;
+}
 
 
 @media (min-width:992px) {
@@ -36,28 +51,29 @@
   }
 }
 
-@media (min-width:992px) {
-  .video-container.collapsed.show-play .play {
-    opacity: 1;
-  }
+.video-container.collapsed.show-play .play {
+  opacity: 1;
+  transform: scale(0.5);
 }
+
 
 .video-container .video {
   position: relative;
   pointer-events: all;
   border-radius: 12px;
-  box-shadow: 0 55px 70px -20px rgba(50, 50, 93, .55), 0 20px 30px -10px rgba(0, 0, 0, .14);
+  box-shadow: 0 15px 10px -40px rgba(50,50,93,.55), 0 20px 19px -10px rgba(0,0,0,.14);
+}
+
+.video-container .video.animated {
+  transition: transform .4s cubic-bezier(.645, 0, .355, 1);
 }
 
 @media (min-width:992px) {
-  .video-container .video.animated {
-    transition: transform .4s cubic-bezier(.645, 0, .355, 1);
+  .video-container .video {
+    box-shadow: 0 55px 70px -20px rgba(50, 50, 93, .55), 0 20px 30px -10px rgba(0, 0, 0, .14);
   }
 }
 
-.video-container .video:hover .play {
-  transform: scale(1.1);
-}
 
 .video-container .video:active .play {
   transform: none;
@@ -98,22 +114,13 @@
   margin-top: 30px;
   font-style: italic;
 }
-@media (min-width:670px) {
-  .video-caption {
-    text-align: center;
+
+
+@media(max-width: 768px) {
+  .video__overflow-mobile {
+    overflow-x: hidden;
+    margin: 0 -15px;
+    margin-top: -65px;
+    width: calc(100% + 30px);
   }
-}@media (min-width:992px) {
-  .video-caption {
-    flex-basis: 50%;
-    margin-top: 430px;
-    padding-left: 20px;
-    padding-right: 40px;
-    text-align: left;
-    opacity: 0;
-    transform: scale(.95);
-    transition: opacity .4s cubic-bezier(.645, 0, .355, 1), transform .4s cubic-bezier(.645, 0, .355, 1);
-  }
-}  .video-caption.visible {
-     opacity: 1;
-     transform: none;
-   }
+}

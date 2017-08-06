@@ -848,10 +848,11 @@
 
     &_fifth__img {
       z-index: 1;
-      bottom: -11%;
       right: 50%;
       transform: translate(50%, 0);
-      width: 90%;
+      bottom: -7px;
+      width: auto;
+      height: 300px;
     }
 
     &_sixth {
@@ -1061,7 +1062,6 @@
   .wyg-module {
     &_first {
       padding-top: 61px;
-      padding-bottom: 164px;
     }
 
     &_third {
@@ -1070,7 +1070,7 @@
 
       background-image: url('../img/mobile_4_days-mobile.png'), url('../img/photos1@2x.png'), url('../img/photos2@2x.png');
       background-position: 94px bottom,-33% 95%,-8% 104%;
-      background-size: 95%,176px 218px, 176px 199px;
+      background-size:95%,198px auto,198px auto;
     }
 
     &_fourth {
