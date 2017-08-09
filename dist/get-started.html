@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/normalize.min.css">
     <link rel="stylesheet" href="libs/bootstrap/dist/css/bootstrap.min.css">
     <link href="libs/mmenu/jquery.mmenu.css" type="text/css" rel="stylesheet" />
+    <link href="libs/ellipsis/ellipsis.css" type="text/css" rel="stylesheet" />
     <link rel="stylesheet" href="css/main.min.css">
     <script src="https://use.typekit.net/pca4zir.js"></script>
     <script>try{Typekit.load({ async: true });}catch(e){}</script>
@@ -17,7 +18,7 @@
 
     <header class="header">
         <a href="#" class="header__logo">
-            <img src="img/logo-header.svg" alt="" class="header__logo-img">
+            <img src="./img/logo-header.svg" alt="" class="header__logo-img">
         </a>
         
         <div class="header__nav-wrapper">
@@ -42,12 +43,10 @@
             </ul>
         </nav>
 
-        <a href="#my-menu">
-            <div class="header__burger">
-                <div class="header__burger-dash header__burger-dash__top"></div>
-                <div class="header__burger-dash header__burger-dash__middle"></div>
-                <div class="header__burger-dash header__burger-dash__bottom"></div>
-            </div>
+        <a class="header__burger" href="#my-menu">
+            <div class="header__burger-dash header__burger-dash__top"></div>
+            <div class="header__burger-dash header__burger-dash__middle"></div>
+            <div class="header__burger-dash header__burger-dash__bottom"></div>
         </a>
     </header>
 
@@ -69,7 +68,7 @@
     <div class="text">
         <div class="container">
             <div class="row">
-                <div class="col-md-6 col-md-offset-3 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1">
+                <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1">
                     <p>
                         <b>If you want to lose weight, get in shape, build muscle, feel good, healthy and positive
                         about yourself then you have come to the right place!
@@ -100,22 +99,23 @@
         </div>
     </div>
 
-    <div class="promo promo_gray-bg">
-        <picture class="promo__pic">
-            <source srcset="img/getstarted-fat-man_mobile.png" media="(max-width: 767px)">
-            <source srcset="img/getstarted-fat-man.jpg">
-            <img class="promo__img promo__img_min" src="img/getstarted-fat-man.jpg" alt="">
-        </picture>
-        <div class="promo__info">
-            <h3 class="promo__title_big">17 things you’re doing wrong and don’t even know it</h3>
-            <a href="#"  class="promo__btn">Read more »</a>
+    <div class="promo promo_right" style="background-image: url(img/getstarted-fat-man.jpg);">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5 col-md-offset-2 col-sm-5 col-sm-offset-1 col-xs-10 col-xs-offset-1" >
+                    <div class="promo__info">
+                        <h3 class="promo__title_big js-trim">17 things you’re doing wrong and don’t even know it</h3>
+                        <a href="#"  class="promo__btn">Read more »</a>
+                    </div>
+                </div>
+            </div>
         </div>
-     </div>
+    </div>
 
     <div class="text">
         <div class="container">
             <div class="row">
-                <div class="col-md-6 col-md-offset-3 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1">
+                <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1">
                     <p>
                         We’ll teach you everything you need to know on how to train, how to eat and how to think,
                         so you can reach any fitness goal you set out to achieve.. these will be skills for life which
@@ -138,23 +138,23 @@
         </div>
     </div>
 
-    <div class="promo-block">
-        <picture class="promo-block__pic">
-            <source srcset="img/getstarted-jeans_mobile.png" media="(max-width: 767px)">
-            <source srcset="img/getstarted-jeans.png" media="(max-width: 991px)">
-            <source srcset="img/getstarted-jeans.png">
-            <img class="promo-block__img promo-block__img_min" src="img/getstarted-jeans.png" alt="">
-        </picture>
-        <div class="promo-block__info">
-            <h3 class="promo-block__title">Transforming your body is much more simple than you think</h3>
-            <a href="#" class="promo-block__btn">Read more »</a>
+    <div class="promo promo_left promo_min" style="background-image: url(img/getstarted-jeans.png);">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-md-offset-5 col-sm-4 col-sm-offset-5 col-xs-10 col-xs-offset-1" >
+                    <div class="promo__info">
+                        <h3 class="promo-block__title  js-trim">Transforming your body is much more simple than you think</h3>
+                        <a href="#" class="promo-block__btn">Read more »</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
     <div class="text">
         <div class="container">
             <div class="row">
-                <div class="col-md-6 col-md-offset-3 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1">
+                <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1">
                     <p>
                         Our focus is on “regular people” (for lack of a better term), not athletes or fitness junkies.
                         We help people that have busy lives and that can not and do not want to spend hours at the gym,
@@ -177,22 +177,23 @@
         </div>
     </div>
 
-    <div class="promo promo_black-bg">
-        <picture class="promo__pic">
-            <source srcset="img/getstarted-fat-man_2_mobile.png" media="(max-width: 767px)">
-            <source srcset="img/getstarted-fat-man_2.jpg">
-            <img class="promo__img promo__img_min" src="img/getstarted-fat-man_2.jpg" alt="">
-        </picture>
-        <div class="promo__info">
-            <h3 class="promo__title_big promo__title_big_light">Get off the treadmill, it’s killing your weight loss!</h3>
-            <a href="#"  class="promo__btn promo__btn_light">Read more »</a>
+    <div class="promo promo_right" style="background-image: url(img/getstarted-fat-man_2.jpg);">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5 col-md-offset-2 col-sm-5 col-sm-offset-1 col-xs-10 col-xs-offset-1" >
+                    <div class="promo__info">
+                        <h3 class="promo__title_big promo__title_big_light js-trim">Get off the treadmill, it’s killing your weight loss!</h3>
+                        <a href="#"  class="promo__btn promo__btn_light">Read more »</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
     <div class="text">
         <div class="container">
             <div class="row">
-                <div class="col-md-6 col-md-offset-3 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1">
+                <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1">
                     <p>
                         <b>I love to eat, is my transformation doomed before it even starts?</b>
                     </p>
@@ -208,23 +209,23 @@
         </div>
     </div>
 
-    <div class="promo-block">
-        <picture class="promo-block__pic">
-            <source srcset="img/getstarted-cake_mobile.png" media="(max-width: 767px)">
-            <source srcset="img/getstarted-cake.png" media="(max-width: 991px)">
-            <source srcset="img/getstarted-cake.png">
-            <img class="promo-block__img promo-block__img_min" src="img/getstarted-cake.png" alt="">
-        </picture>
-        <div class="promo-block__info">
-            <h3 class="promo-block__title">Why a strict diet is the opposite of what you need for weight loss or muscle gain</h3>
-            <a href="#" class="promo-block__btn">Read more »</a>
+    <div class="promo promo_left promo_min" style="background-image: url(img/getstarted-cake.png);">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-md-offset-5 col-sm-4 col-sm-offset-5 col-xs-10 col-xs-offset-1" >
+                    <div class="promo__info">
+                        <h3 class="promo-block__title  js-trim">Why a strict diet is the opposite of what you need for weight loss or muscle gain</h3>
+                        <a href="#" class="promo-block__btn">Read more »</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
     <div class="text">
         <div class="container">
             <div class="row">
-                <div class="col-md-6 col-md-offset-3 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1">
+                <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1">
                     <p>
                         <b>I’m looking to burn fat and build muscle at the same time..is that even possible?</b>
                     </p>
@@ -238,23 +239,23 @@
         </div>
     </div>
 
-    <div class="promo-block">
-        <picture class="promo-block__pic">
-            <source srcset="img/getstarted-fitness-girl_mobile.png" media="(max-width: 767px)">
-            <source srcset="img/getstarted-fitness-girl.png" media="(max-width: 991px)">
-            <source srcset="img/getstarted-fitness-girl.png">
-            <img class="promo-block__img" src="img/getstarted-fitness-girl.png" alt="">
-        </picture>
-        <div class="promo-block__info promo-block__info_left">
-            <h3 class="promo-block__title promo-block__title_light">How to simultaneously lose fat and build muscle.</h3>
-            <a href="#" class="promo-block__btn promo-block__btn_light">Read more »</a>
+    <div class="promo promo_left promo_min" style="background-image: url(img/getstarted-fitness-girl.png);">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-md-offset-3 col-sm-4 col-sm-offset-3 col-xs-10 col-xs-offset-1" >
+                    <div class="promo__info">
+                        <h3 class="promo-block__title promo-block__title_light">How to simultaneously lose fat and build muscle.</h3>
+                        <a href="#" class="promo-block__btn promo-block__btn_light">Read more »</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
     <div class="text">
         <div class="container">
             <div class="row">
-                <div class="col-md-6 col-md-offset-3 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1">
+                <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1">
                     <p>
                         <b>
                             I’m in pretty decent shape, but there are certain areas in my body where i can never get
@@ -271,25 +272,25 @@
         </div>
     </div>
 
-    <div class="promo">
-        <picture class="promo__pic">
-            <source srcset="img/getstarted-fat-woman_mobile.png" media="(max-width: 767px)">
-            <source srcset="img/getstarted-fat-woman.png" media="(max-width: 991px)">
-            <source srcset="img/getstarted-fat-woman.png">
-            <img class="promo__img promo__img_min" src="img/getstarted-fat-woman.png" alt="">
-        </picture>
-        <div class="promo__info">
-            <h3 class="promo__title_big">How to get rid of those annoyingly stubborn last few pounds that
-                never come off
-            </h3>
-            <a href="#"  class="promo__btn">Read more »</a>
+    <div class="promo promo_right" style="background-image: url(img/getstarted-fat-woman.jpg);">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5 col-md-offset-2 col-sm-5 col-sm-offset-1 col-xs-10 col-xs-offset-1" >
+                    <div class="promo__info">
+                        <h3 class="promo__title_big js-trim">How to get rid of those annoyingly stubborn last few pounds that
+                            never come off
+                        </h3>
+                        <a href="#"  class="promo__btn">Read more »</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
     <div class="text">
         <div class="container">
             <div class="row">
-                <div class="col-md-6 col-md-offset-3 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1">
+                <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1">
                     <p>
                         <b>
                             I really do not eat allot..but still can not lose weight.. whats going on here?
@@ -307,23 +308,23 @@
         </div>
     </div>
 
-    <div class="promo-block">
-        <picture class="promo-block__pic">
-            <source srcset="img/blog-promo-xs375x436.png" media="(max-width: 767px)">
-            <source srcset="img/blog-promo-sm768x353.png" media="(max-width: 991px)">
-            <source srcset="img/blog-promo-block833x345.png">
-            <img class="promo-block__img" src="img/blog-promo-block833x345.png" alt="">
-        </picture>
-        <div class="promo-block__info promo-block__info_center_top">
-            <h3 class="promo-block__title promo-block__title_light">How to kick start your metabolism and put in overdrive..</h3>
-            <a href="#" class="promo-block__btn promo-block__btn_light">Read more »</a>
+    <div class="promo promo_left promo_min" style="background-image: url(img/blog-promo-block833x345.png);">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-md-offset-3 col-sm-4 col-sm-offset-4 col-xs-10 col-xs-offset-1" >
+                    <div class="promo__info">
+                        <h3 class="promo-block__title promo-block__title_light">How to kick start your metabolism and put in overdrive..</h3>
+                        <a href="#" class="promo-block__btn promo-block__btn_light">Read more »</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
     <div class="text">
         <div class="container">
             <div class="row">
-                <div class="col-md-6 col-md-offset-3 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1">
+                <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1">
                     <p>
                         <b>
                             Is sugar really that bad for weight loss and health?
@@ -342,23 +343,24 @@
         </div>
     </div>
 
-    <div class="promo">
-        <picture class="promo__pic">
-            <source srcset="img/getstarted-skull_mobile.png" media="(max-width: 767px)">
-            <source srcset="img/getstarted-skull.jpg">
-            <img class="promo__img" src="img/getstarted-skull.jpg" alt="">
-        </picture>
-        <div class="promo__info">
-            <h3 class="promo__title_big promo__title_big_light">Sugar is hiding everywhere..
-                Learn how to spot it.</h3>
-            <a href="#"  class="promo__btn promo__btn_light">Read more »</a>
+    <div class="promo promo_right" style="background-image: url(img/getstarted-skull.jpg);">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5 col-md-offset-2 col-sm-5 col-sm-offset-1 col-xs-10 col-xs-offset-1" >
+                    <div class="promo__info">
+                        <h3 class="promo__title_big promo__title_big_light js-trim">Sugar is hiding everywhere..
+                            Learn how to spot it.</h3>
+                        <a href="#"  class="promo__btn promo__btn_light">Read more »</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
     <div class="text">
         <div class="container">
             <div class="row">
-                <div class="col-md-6 col-md-offset-3 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1">
+                <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1">
                     <p>
                         <b>
                             Is there really a difference between how men and women should train..?
@@ -376,26 +378,26 @@
         </div>
     </div>
 
-    <div class="promo-block">
-        <picture class="promo-block__pic">
-            <source srcset="img/blog-promo-xs375x436.png" media="(max-width: 767px)">
-            <source srcset="img/blog-promo-sm768x353.png" media="(max-width: 991px)">
-            <source srcset="img/blog-promo-block833x345.png">
-            <img class="promo-block__img" src="img/blog-promo-block833x345.png" alt="">
-        </picture>
-        <div class="promo-block__info promo-block__info_center_top2">
-            <h3 class="promo-block__title promo-block__title_light">Men and women
-                can train the same..<br>
-                mostly.
-            </h3>
-            <a href="#" class="promo-block__btn promo-block__btn_light">Read more »</a>
+    <div class="promo promo_left promo_min" style="background-image: url(img/blog-promo-block833x345.png);">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-md-offset-4 col-sm-4 col-sm-offset-4 col-xs-10 col-xs-offset-1" >
+                    <div class="promo__info">
+                        <h3 class="promo-block__title promo-block__title_light">Men and women
+                            can train the same..<br>
+                            mostly.
+                        </h3>
+                        <a href="#" class="promo-block__btn promo-block__btn_light">Read more »</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
     <div class="text">
         <div class="container">
             <div class="row">
-                <div class="col-md-6 col-md-offset-3 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1">
+                <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1">
                     <p>
                         <b>
                             I despise calorie counting, am i a lost cause?
@@ -413,24 +415,24 @@
         </div>
     </div>
 
-    <div class="promo promo_center">
-        <picture class="promo__pic">
-            <source srcset="img/getstarted-cookie_mobile.png" media="(max-width: 767px)">
-            <source srcset="img/getstarted-cookie.png" media="(max-width: 991px)">
-            <source srcset="img/getstarted-cookie.png">
-            <img class="promo__img" src="img/getstarted-cookie.png" alt="">
-        </picture>
-        <div class="promo__info promo__info_center">
-            <h3 class="promo__title_big">How to effectively lose weight without the overbearing aspect of
-                calorie counting</h3>
-            <a href="#"  class="promo__btn">Read more »</a>
+    <div class="promo promo_left" style="background-image: url(img/getstarted-cookie.png);">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-4 col-sm-5 col-sm-offset-4 col-xs-10 col-xs-offset-1" >
+                    <div class="promo__info">
+                        <h3 class="promo__title_big js-trim">How to effectively lose weight without the overbearing aspect of
+                            calorie counting</h3>
+                        <a href="#"  class="promo__btn">Read more »</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
     <div class="text">
         <div class="container">
             <div class="row">
-                <div class="col-md-6 col-md-offset-3 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1">
+                <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1">
                     <p>
                         <b>
                             I constantly hear about meal planning and meal prep..what is it and why will it help me?
@@ -448,23 +450,23 @@
         </div>
     </div>
 
-    <div class="promo">
-        <picture class="promo__pic">
-            <source srcset="img/getstarted-cook_mobile.png" media="(max-width: 767px)">
-            <source srcset="img/getstarted-cook.png" media="(max-width: 991px)">
-            <source srcset="img/getstarted-cook.png">
-            <img class="promo__img" src="img/getstarted-cook.png" alt="">
-        </picture>
-        <div class="promo__info">
-            <h3 class="promo__title_big">Meal prep and planning explained</h3>
-            <a href="#"  class="promo__btn">Read more »</a>
+    <div class="promo promo_right" style="background-image: url(img/getstarted-cook.png);">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5 col-md-offset-2 col-sm-5 col-sm-offset-1 col-xs-10 col-xs-offset-1" >
+                    <div class="promo__info">
+                        <h3 class="promo__title_big js-trim">Meal prep and planning explained</h3>
+                        <a href="#"  class="promo__btn">Read more »</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
     <div class="text">
         <div class="container">
             <div class="row">
-                <div class="col-md-6 col-md-offset-3 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1">
+                <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1">
                     <p>
                         <b>
                             I’m just a normal person, i’m always busy with work and the kids, can i transform my body?
@@ -482,23 +484,23 @@
         </div>
     </div>
 
-    <div class="promo-block">
-        <picture class="promo-block__pic">
-            <source srcset="img/getstarted-street_mobile.png" media="(max-width: 767px)">
-            <source srcset="img/getstarted-street.png" media="(max-width: 991px)">
-            <source srcset="img/getstarted-street.png">
-            <img class="promo-block__img" src="img/getstarted-street.png" alt="">
-        </picture>
-        <div class="promo-block__info promo-block__info_left_bottom">
-            <h3 class="promo-block__title"><b>Transformation</b> tips for <b>busy people.</b></h3>
-            <a href="#" class="promo-block__btn">Read more »</a>
+    <div class="promo promo_left promo_min" style="background-image: url(img/getstarted-street.png);">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-md-offset-2 col-sm-4 col-sm-offset-2 col-xs-10 col-xs-offset-1" >
+                    <div class="promo__info promo__info_bottom">
+                        <h3 class="promo-block__title js-trim"><b>Transformation</b> tips for <b>busy people.</b></h3>
+                        <a href="#" class="promo-block__btn">Read more »</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
     <div class="text">
         <div class="container">
             <div class="row">
-                <div class="col-md-6 col-md-offset-3 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1">
+                <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1">
                    <h3>
                        Want more scientifically backed and proven methods that will help you finally achieve your
                        transformation goals?
@@ -512,22 +514,10 @@
         </div>
     </div>
 
-    <div class="promo-block">
-        <picture class="promo-block__pic">
-            <source srcset="img/blog-promo-xs375x436.png" media="(max-width: 767px)">
-            <source srcset="img/blog-promo-sm768x353.png" media="(max-width: 991px)">
-            <source srcset="img/blog-promo-block833x345.png">
-            <img class="promo-block__img" src="img/blog-promo-block833x345.png" alt="">
-        </picture>
-        <div class="promo-block__info promo-block__info_left">
-            <h3 class="promo-block__title">Embedded questionnaire for segementation</h3>
-        </div>
-    </div>
-
     <div class="text">
         <div class="container">
             <div class="row">
-                <div class="col-md-6 col-md-offset-3 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1">
+                <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1">
                     <h3>Here’s our message to you..</h3>
                     <p>
                         We know you can achieve your transformation goals. We know because we have helped thousands
@@ -550,32 +540,32 @@
         </div>
     </div>
 
-    <div class="promo">
-        <picture class="promo__pic">
-            <source srcset="img/blog-promo-xs375x436.png" media="(max-width: 767px)">
-            <source srcset="img/blog-promo-sm768x353.png" media="(max-width: 991px)">
-            <source srcset="img/blog-promo-1440x654.png">
-            <img class="promo__img" src="img/blog-promo-1440x654.png" alt="">
-        </picture>
-        <div class="promo__info">
-            <h3 class="promo__title_big">Transformation Opt In</h3>
+    <div class="promo promo_right" style="background-image: url(img/blog-promo-1440x654.png);">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5 col-md-offset-2 col-sm-5 col-sm-offset-1 col-xs-10 col-xs-offset-1" >
+                    <div class="promo__info">
+                        <h3 class="promo__title_big js-trim">Transformation Opt In</h3>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
-    <div class="promo">
-        <picture class="promo__pic">
-            <source srcset="img/blog-promo-xs375x436.png" media="(max-width: 767px)">
-            <source srcset="img/blog-promo-sm768x353.png" media="(max-width: 991px)">
-            <source srcset="img/blog-promo-1440x654.png">
-            <img class="promo__img" src="img/blog-promo-1440x654.png" alt="">
-        </picture>
-        <div class="promo__info">
-            <h3 class="promo__title_big">Free Guides</h3>
+    <div class="promo promo_right" style="background-image: url(img/blog-promo-1440x654.png);">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5 col-md-offset-2 col-sm-5 col-sm-offset-1 col-xs-10 col-xs-offset-1" >
+                    <div class="promo__info">
+                        <h3 class="promo__title_big js-trim">Free Guides</h3>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
     <footer class="footer container">
-        <p class="footer__copy">&copy; Bodytransformations.com</p>
+        <p class="footer__copy"></p>
         <nav class="footer__nav">
             <a href="#" class="footer__link">Terms</a>
             <a href="#" class="footer__link">Privacy</a>
@@ -592,6 +582,7 @@
 
 <script src="libs/vue/dist/vue.min.js"></script>
 <script src="libs/jquery/dist/jquery.min.js"></script>
+<script src="libs/ellipsis/jquery.ellipsis.min.js"></script>
 <script src="libs/mmenu/jquery.mmenu.js" type="text/javascript"></script>
 <script type="text/javascript">
     $(document).ready(function() {
@@ -603,6 +594,24 @@
                 pageSelector: "#app"
             }
         });
+    });
+
+    function trimString () {
+        if (app.windowWidth < 768) {
+            $('.js-trim').ellipsis({
+                lines: 2,
+                ellipClass: 'ellip',
+                responsive: true
+            });
+        }
+    }
+
+    $(document).ready(function() {
+        trimString();
+    });
+
+    $(window).resize(function() {
+        trimString();
     });
 </script>
 <script src="js/frombox.js"></script>

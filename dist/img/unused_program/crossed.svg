@@ -1,1 +1,22 @@
-<svg width="36" height="36" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg"><title>6E407F45-6A04-4D31-ADF3-FFE1620BEDA6</title><defs><linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="a"><stop stop-color="#FD6882" offset="0%"/><stop stop-color="#E3405D" offset="100%"/></linearGradient></defs><g transform="translate(-713 -7959)" fill="url(#a)" fill-rule="evenodd"><path d="M719.904 7983.564s-6.634 5.18-4.667 8.73l.734.737c1.176 1.58 3.933 3.155 6.683 0 1.176-1.58 23.585-29.592 23.585-29.592 2.754-3.155-.784-5.916-3.142-3.55l-23.193 23.675z"/><path d="M724.42 7965.773s-5.18-6.634-8.73-4.667l-.737.734c-1.58 1.176-3.155 3.933 0 6.683 1.58 1.176 29.592 23.585 29.592 23.585 3.155 2.754 5.916-.784 3.55-3.142l-23.675-23.193z"/></g></svg>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="36px" height="36px" viewBox="0 0 36 36" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 41.2 (35397) - http://www.bohemiancoding.com/sketch -->
+    <title>6E407F45-6A04-4D31-ADF3-FFE1620BEDA6</title>
+    <desc>Created with sketchtool.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#FD6882" offset="0%"></stop>
+            <stop stop-color="#E3405D" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Welcome" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Program---Desktop" transform="translate(-713.000000, -7959.000000)" fill="url(#linearGradient-1)">
+            <g id="Group-50" transform="translate(275.000000, 7912.000000)">
+                <g id="apm-checkmark-copy-20" transform="translate(438.000000, 47.000000)">
+                    <path d="M6.90376822,24.5639636 C6.90376822,24.5639636 0.270202842,29.7431488 2.23670755,33.2935855 L2.97075881,34.0307072 C4.14674169,35.6101295 6.90376822,37.1862884 9.65426152,34.0307072 C10.8302444,32.451285 33.2392515,4.43938322 33.2392515,4.43938322 C35.9930115,1.28380203 32.4552629,-1.47692361 30.0967639,0.888946468 L6.90376822,24.5639636 Z" id="Shape-Copy"></path>
+                    <path d="M6.90376822,24.5639636 C6.90376822,24.5639636 0.270202842,29.7431488 2.23670755,33.2935855 L2.97075881,34.0307072 C4.14674169,35.6101295 6.90376822,37.1862884 9.65426152,34.0307072 C10.8302444,32.451285 33.2392515,4.43938322 33.2392515,4.43938322 C35.9930115,1.28380203 32.4552629,-1.47692361 30.0967639,0.888946468 L6.90376822,24.5639636 Z" id="Shape-Copy-2" transform="translate(18.057455, 17.926544) scale(-1, -1) rotate(-90.000000) translate(-18.057455, -17.926544) "></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

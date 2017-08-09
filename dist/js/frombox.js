@@ -5,7 +5,7 @@
            var video = videoContainer.querySelector(".video") || '',
                 player = video.querySelector("video") || '',
                 scrollOffset, SCROLL_COLLAPSE_THRESHOLD = 150,
-                LG_VIEWPORT_WIDTH = 1040,
+                LG_VIEWPORT_WIDTH = 375,
                 TRANSITION_DURATION = 400,
                 hasAutoplayed = !1;
 
@@ -62,9 +62,9 @@
                     return videoContainer.classList.contains("collapsed")
                 },
                 updateFullsizeVideoBounds = function() {
-                    var e = videoContainer.getBoundingClientRect().top,
+                   /* var e = videoContainer.getBoundingClientRect().top,
                         t = (window.innerHeight - video.offsetHeight) / 2 - e;
-                    video.style.transform = "translateY(" + t + "px)"
+                    video.style.transform = "translateY(" + t + "px)"*/
                 },
                 expandVideo = function() {
                     isCollapsed() && (setVolume(1, 1500), player.play(), showControls(), video.classList.add("animated"), updateFullsizeVideoBounds(), scrollOffset = window.scrollY, videoContainer.classList.remove("collapsed"), setTimeout(function() {

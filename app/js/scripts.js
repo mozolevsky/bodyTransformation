@@ -17,17 +17,18 @@ var app = new Vue({
         },
         windowWidth: 0
     },
-    mounted() {
-        this.$nextTick(function() {
+    mounted: function mounted() {
+        this.$nextTick(function () {
             window.addEventListener('resize', this.getWindowWidth);
 
             //Init
-            this.getWindowWidth()
-        })
+            this.getWindowWidth();
+        });
     },
-    beforeDestroy() {
+    beforeDestroy: function beforeDestroy() {
         window.removeEventListener('resize', this.getWindowWidth);
     },
+
     methods: {
         isNum: function isNum(value) {
             return !isNaN(value);
@@ -54,7 +55,7 @@ var app = new Vue({
                 this.formData.calcOverlay = true;
                 var self = this;
 
-                setTimeout(function() {
+                setTimeout(function () {
                     self.formData.calcOverlay = false;
                     self.formData.formStepOne = false;
                 }, 3000);
@@ -76,7 +77,7 @@ var app = new Vue({
                 }
             }
         },
-        getWindowWidth(event) {
+        getWindowWidth: function getWindowWidth(event) {
             this.windowWidth = document.documentElement.clientWidth;
         }
     },

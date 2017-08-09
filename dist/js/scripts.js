@@ -5,6 +5,7 @@ var app = new Vue({
     data: {
         formData: {
             formStepOne: true,
+            calcOverlay: false,
             weight: '',
             weightUnitChecked: false,
             height: '',
@@ -13,8 +14,21 @@ var app = new Vue({
             name: '',
             email: '',
             firstValidCounter: 0
-        }
+        },
+        windowWidth: 0
     },
+    mounted: function mounted() {
+        this.$nextTick(function () {
+            window.addEventListener('resize', this.getWindowWidth);
+
+            //Init
+            this.getWindowWidth();
+        });
+    },
+    beforeDestroy: function beforeDestroy() {
+        window.removeEventListener('resize', this.getWindowWidth);
+    },
+
     methods: {
         isNum: function isNum(value) {
             return !isNaN(value);
@@ -38,11 +52,19 @@ var app = new Vue({
 
             if (counter == 3) {
                 console.log('We can push the button');
-                this.formData.formStepOne = false;
+                this.formData.calcOverlay = true;
+                var self = this;
+
+                setTimeout(function () {
+                    self.formData.calcOverlay = false;
+                    self.formData.formStepOne = false;
+                }, 3000);
+
                 counter = 0;
             } else {
                 console.log('We can not do it');
                 if (this.formData.weight == '') {
+
                     this.formData.weight = 'Enter numerical data';
                 }
 
@@ -54,6 +76,9 @@ var app = new Vue({
                     this.formData.age = 'Enter numerical data';
                 }
             }
+        },
+        getWindowWidth: function getWindowWidth(event) {
+            this.windowWidth = document.documentElement.clientWidth;
         }
     },
     computed: {
@@ -61,7 +86,7 @@ var app = new Vue({
             return this.formData.weightUnitChecked ? 'kg' : 'lbs';
         },
         heightUnit: function heightUnit() {
-            return this.formData.heightUnitChecked ? 'cm' : 'in';
+            return this.formData.heightUnitChecked ? 'cm' : 'ft';
         },
         weightStyles: function weightStyles() {
             return {

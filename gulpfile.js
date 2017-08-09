@@ -78,12 +78,12 @@ gulp.task('clearCache', function() {
 
 gulp.task('img', function() {
     return gulp.src('app/img/**/*')
-        .pipe(cache(imagemin({
+       /* .pipe(cache(imagemin({
             interlaced: true,
             progressive: true,
             svigoPlugins: [{removeViewBox: false}],
             use: [pngquant()]
-        })))
+        })))*/
         .pipe(gulp.dest('dist/img'));
 });
 
@@ -106,7 +106,7 @@ gulp.task('build', ['clean', 'img','es6', 'sass', 'scriptsMin'], function() {
         .pipe(gulp.dest('dist'));
 
     var moveVideo = gulp.src('app/video/*')
-        .pipe(gulp.dest('dist'));
+        .pipe(gulp.dest('dist/video'));
 
     var moveLibs = gulp.src('app/libs/**/*')
         .pipe(gulp.dest('dist/libs'));

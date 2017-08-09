@@ -41,12 +41,10 @@
             </ul>
         </nav>
 
-        <a href="#my-menu">
-            <div class="header__burger">
-                <div class="header__burger-dash header__burger-dash__top"></div>
-                <div class="header__burger-dash header__burger-dash__middle"></div>
-                <div class="header__burger-dash header__burger-dash__bottom"></div>
-            </div>
+        <a class="header__burger" href="#my-menu">
+            <div class="header__burger-dash header__burger-dash__top"></div>
+            <div class="header__burger-dash header__burger-dash__middle"></div>
+            <div class="header__burger-dash header__burger-dash__bottom"></div>
         </a>
     </header>
 
@@ -174,7 +172,7 @@
     </div>
 
     <footer class="footer container">
-        <p class="footer__copy">&copy; Bodytransformations.com</p>
+        <p class="footer__copy"></p>
         <nav class="footer__nav">
             <a href="#" class="footer__link">Terms</a>
             <a href="#" class="footer__link">Privacy</a>
@@ -186,6 +184,11 @@
             <a href="#" class="footer__link">Rss</a>
         </nav>
     </footer>
+    <transition name="calc-overlay">
+        <div class="calc-overlay" v-if="formData.calcOverlay" v-cloak>
+            <p class="calc-overlay__title">Calculating your results</p>
+        </div>
+    </transition>
 </div>
 
 <script src="libs/vue/dist/vue.js"></script>
