@@ -316,6 +316,69 @@
   opacity: 0;
 }
 
+.calc-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100vw;
+  height: 100vh;
+  background: white;
+  opacity: 0.9;
+
+  &__title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 440px;
+    padding-right: 50px;
+    @include fontSH(34px, auto);
+    color: #58637A;
+    font-weight: bold;
+
+    &:after {
+      overflow: hidden;
+      display: inline-block;
+      vertical-align: bottom;
+      -webkit-animation: ellipsis steps(4,end) 900ms infinite;
+      animation: ellipsis steps(4,end) 900ms infinite;
+      content: "\2026"; /* ascii code for the ellipsis character */
+      width: 0;
+    }
+
+    @keyframes ellipsis {
+      to {
+        width: 1.25em;
+      }
+    }
+  }
+
+  &-enter {
+    opacity: 0;
+  }
+
+  &-enter-to {
+    opacity: 0.9;
+  }
+
+  &-leave {
+    opacity: 0.9;
+  }
+
+  &-leave-to {
+    opacity: 0;
+  }
+
+  &-enter-active,
+  &-leave-active {
+    transition: all 0.8s ease;
+  }
+}
+
+
+
+
 @media (max-width: 1072px) {
   .calc {
     &__laptop-bg {

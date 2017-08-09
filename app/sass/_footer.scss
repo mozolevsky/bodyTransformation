@@ -4,15 +4,22 @@
   width: 100%;
   height: auto;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: 10.5px;
   text-transform: uppercase;
   border-top: solid 1px rgba(151, 151, 151, 0.2);
 
+  &_ind {
+    height: 9vh!important;
+    padding: 5px 0 10px;
+  }
+
   &__copy {
     padding: 0;
     margin: 0;
+    margin-bottom: 10px;
     width: 250px;
     height: 30px;
     color: $slate;

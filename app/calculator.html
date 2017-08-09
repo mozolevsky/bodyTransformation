@@ -184,6 +184,11 @@
             <a href="#" class="footer__link">Rss</a>
         </nav>
     </footer>
+    <transition name="calc-overlay">
+        <div class="calc-overlay" v-if="formData.calcOverlay" v-cloak>
+            <p class="calc-overlay__title">Calculating your results</p>
+        </div>
+    </transition>
 </div>
 
 <script src="libs/vue/dist/vue.js"></script>

@@ -12,7 +12,47 @@
     <script>try{Typekit.load({ async: true });}catch(e){}</script>
 </head>
 <body>
+
+
 <div id="app">
+    <header class="header header_ind">
+        <a href="#" class="header__logo">
+            <picture>
+                <source srcset="img/logo-header.svg" media="(max-width: 991px)">
+                <source srcset="img/logo-header.svg">
+                <img src="img/logo-header.svg" alt="" class="header__logo-img">
+            </picture>
+        </a>
+
+        <div class="header__nav-wrapper">
+            <nav class="header__nav">
+                <a href="#" class="header__nav-link">About Us</a>
+                <a href="#" class="header__nav-link">Free tools</a>
+                <a href="#" class="header__nav-link">Program</a>
+                <a href="#" class="header__nav-link">The Team</a>
+                <a href="#" class="header__nav-link">Blog</a>
+            </nav>
+            <a href="#" class="header__btn">Start here</a>
+        </div>
+
+        <nav id="my-menu">
+            <ul>
+                <li><a href="#">About us</a></li>
+                <li><a href="#">Free tools</a></li>
+                <li><a href="#">Program</a></li>
+                <li><a href="#">The team</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Start here</a></li>
+            </ul>
+        </nav>
+
+        <a class="header__burger" href="#my-menu">
+            <div class="header__burger-dash header__burger-dash__top"></div>
+            <div class="header__burger-dash header__burger-dash__middle"></div>
+            <div class="header__burger-dash header__burger-dash__bottom"></div>
+        </a>
+    </header>
+
     <div class="landing">
         <img src="img/logo-landing.svg" alt="logo" class="landing__logo-mobile">
         <section class="landing__container">
@@ -21,14 +61,24 @@
             <h1 class="landing__title">Need Help With Your Fitness And Nutrition Goals?</h1>
             <h5 class="landing__sub-title">We got you covered! Get early access to lorem ipsum.</h5>
             <div class="landing__btn-wrapper">
-                <a href="#" class="landing__btn">Start Your Journey 1</a>
-                <a href="#" class="landing__btn">Start Your Journey 2</a>
-                <a href="#" class="landing__btn">Start Your Journey 3</a>
+                <a href="#" class="landing__btn">I'm a <span class="landing__text-accent">man</span></a>
+                <a href="#" class="landing__btn">I'm a <span class="landing__text-accent">woman</span></a>
             </div>
         </section>
     </div>
-    <footer class="footer">
+
+    <footer class="footer footer_ind container">
         <p class="footer__copy"></p>
+        <nav class="footer__nav">
+            <a href="#" class="footer__link">Terms</a>
+            <a href="#" class="footer__link">Privacy</a>
+            <a href="#" class="footer__link">About</a>
+            <a href="#" class="footer__link">Press</a>
+            <a href="#" class="footer__link">Jobs</a>
+            <a href="#" class="footer__link">Feedback</a>
+            <a href="#" class="footer__link">Site Map</a>
+            <a href="#" class="footer__link">Rss</a>
+        </nav>
     </footer>
 </div>
 

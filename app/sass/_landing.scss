@@ -1,7 +1,7 @@
 .landing {
   width: 100%;
   /* min-height: 822px; */
-  height: 90vh;
+  height: 85vh;
   box-sizing: border-box;
   background: url('../img/bg-landing_desctop.png') no-repeat center;
   background-size: cover;
@@ -41,15 +41,15 @@
   &__btn-wrapper {
     margin-top: 32px;
     display: flex;
-    flex-direction: column;
+    justify-content: space-evenly;
     align-items: center;
   }
 
   &__btn {
     @extend %blue-button;
     @extend .wave;
-    margin-bottom: 16.5px;
     padding: 20px 50px;
+    min-width: 230px;
   }
 
   &__btn:focus {
@@ -57,8 +57,9 @@
     text-decoration: none;
   }
 
-  &__btn:last-child {
-    margin-bottom: 0;
+  &__text-accent {
+    text-transform: uppercase;
+    font-weight: bold;
   }
 }
 
@@ -84,8 +85,8 @@
     }
 
     &__btn {
-      margin-bottom: 16.5px;
-      padding: 20px 50px;
+      min-width: 46%;
+      padding: 20px 0;
     }
   }
 }
@@ -118,6 +119,16 @@
       display: block;
       margin-top: 30px;
       margin-bottom: 16px;
+    }
+
+    &__btn-wrapper {
+      flex-direction: column;
+    }
+
+    &__btn {
+      margin-bottom: 10px;
+      min-width: 295px;
+
     }
   }
 }

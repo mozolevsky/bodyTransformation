@@ -791,8 +791,8 @@
   .wyg-module {
 
     &::after {
-      bottom: -25px;
-      height: 50px;
+      bottom: -50px;
+      height: 100px;
     }
 
     &_first {
@@ -800,10 +800,16 @@
     }
 
     &_second {
+      z-index: 2;
       padding-top: 85px;
-      background: url('../img/strawberries@2x.png') repeat-x;
-      background-position: 3% 106%;
-      background-size: 127px 197px;
+
+      &-wrapper {
+        padding-bottom: 64px;
+        background: url('../img/strawberries@2x.png'), url('../img/strawberries@2x.png');
+        background-repeat: no-repeat;
+        background-position: 0 100%,103% 100%;
+        background-size: 127px 197px;
+      }
 
       &::after {
         content: none;
@@ -811,21 +817,21 @@
     }
 
     &_third {
-      padding-top: 90px;
-      padding-bottom: 170px;
-
-      background-image: url('../img/days@2x.png'), url('../img/photos1@2x.png'), url('../img/photos2@2x.png'), url('../img/photos3@2x.png'), url('../img/photos4@2x.png');
-      background-position: 0 400px,29% 99%,106% 76%,3% 110%,109% 62%;
-      background-size: 88%, 214px 240px, 247px 206px, 243px 191px, 263px 200px;
+      padding-top: 50px;
+      background-image: none;
 
       &-wrapper {
-        background-image: none;
+        padding-top: 0;
+        padding-bottom: 170px;
+        background-image: url('../img/days@2x.png'), url('../img/photos1@2x.png'), url('../img/photos2@2x.png'), url('../img/photos3@2x.png'), url('../img/photos4@2x.png');
+        background-position: 0 396px,29% 93%,106% 76%,3% 102%,109% 62%;
+        background-size: 88%, 214px 240px, 247px 206px, 243px 191px, 263px 200px;
       }
 
       &::before {
-        top: -28px;
-        height: 50px;
         z-index: 1;
+        top: -70px;
+        height: 100px;
       }
     }
 
@@ -838,6 +844,7 @@
     }
 
     &_fifth {
+      z-index: 3;
       padding-top: 0;
       padding-bottom: 265px;
     }
@@ -856,6 +863,7 @@
     }
 
     &_sixth {
+      z-index: 4;
       padding-top: 30px;
     }
 
@@ -1062,19 +1070,28 @@
   .wyg-module {
     &_first {
       padding-top: 61px;
+      padding-bottom: 0;
+
+      &::after {
+        z-index: 0;
+      }
     }
 
     &_third {
-      padding-top: 48px;
-      padding-bottom: 150px;
+      z-index: 0;
 
-      background-image: url('../img/mobile_4_days-mobile.png'), url('../img/photos1@2x.png'), url('../img/photos2@2x.png');
-      background-position: 94px bottom,-33% 95%,-8% 104%;
-      background-size:95%,198px auto,198px auto;
+      &-wrapper {
+        padding-top: 0;
+        padding-bottom: 170px;
+        background-image: url('../img/mobile_4_days-mobile.png'), url('../img/photos1@2x.png'), url('../img/photos2@2x.png');
+        background-position: 94px 97%,-33% 95%,-8% 101%;
+        background-size:95%,198px auto,198px auto;
+      }
     }
 
     &_fourth {
-      padding-top: 70px;
+      z-index: 1;
+      padding-top: 20px;
       padding-bottom: 280px;
 
       background-position: center 90%, 0 bottom;

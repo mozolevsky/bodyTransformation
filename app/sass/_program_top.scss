@@ -1,6 +1,7 @@
 
 .program-top {
   position: relative;
+  height: 100vh;
 
   &::after {
     @extend %skew__bottom;
@@ -9,8 +10,7 @@
 
   &__left {
     position: relative;
-    padding-top: 284px;
-    padding-bottom: 163px;
+    margin-top: 20vh;
     background-color: $white;
   }
 
@@ -51,12 +51,12 @@
     &::after {
       content: '';
       position: absolute;
-      left: -104px;
+      left: -105px;
       top: 0;
-      width: 200px;
+      width: 212px;
       height: 100%;
       background: $white;
-      transform: skewX(12deg);
+      transform: skewX(6deg);
     }
   }
 
@@ -118,7 +118,7 @@
     &__right {
       &::after {
         width: 100px;
-        left: -38px;
+        left: -50px;
         transform: skewX(4deg);
       }
     }

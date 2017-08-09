@@ -13,7 +13,11 @@
   font-size: 16px;
   letter-spacing: 0.4px;
 
-  &_light {
+  &_ind {
+    position: relative;
+    top: 0;
+    padding-top: 10px!important;
+    padding-bottom: 10px!important;
     background-color: white;
   }
 
@@ -71,6 +75,11 @@
   .header {
     width: 100%;
     padding: 0 50px;
+
+    &_ind {
+      top: 0!important;
+      height: 6vh;
+    }
   }
 }
 
