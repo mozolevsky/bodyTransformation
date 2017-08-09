@@ -38,6 +38,7 @@
     background-size: 83px auto;
     background-position: center;
     opacity: 1 !important;
+    transition: background-position 0.5s ease-in-out;
 
     &::after {
       content: 'Fitness';
@@ -45,11 +46,13 @@
       left: 50%;
       transform: translate(-50%, 0);
       bottom: -25px;
-      font-family: FuturaTEE;
+      font-family: 'FreightSans Pro Book', Arial, sans-serif;
       text-transform: uppercase;
       font-size: 14px;
       line-height: 30px;
       font-weight: bold;
+      border-bottom: 2px solid transparent;
+      @include trans();
     }
   }
 
@@ -87,7 +90,7 @@
 
   & .swiper-pagination-bullet .swiper-pagination-bullet-active {
     background-size: 102px auto;
-    background-position-y: 4px;
+    background-position-y: 2px;
   }
 
   & .swiper-pagination-bullet .swiper-pagination-bullet-active::after {
@@ -97,10 +100,11 @@
       border-bottom: 2px solid black;
   }
 
-  & .swiper-pagination-bullet:nth-child(1).swiper-pagination-bullet-active {
+  & .swiper-pagination-bullet:nth-child(1).swiper-pagination-bullet-active,
+  & .swiper-pagination-bullet:nth-child(1).swiper-pagination-bullet:hover {
     background-image: url("../img/fitness_icon.svg");
     background-size: 102px auto;
-    background-position-y: 4px;
+    background-position-y: 2px;
 
     &:after {
       color: #5DD6BD;
@@ -108,10 +112,11 @@
     }
   }
 
-  & .swiper-pagination-bullet:nth-child(2).swiper-pagination-bullet-active {
+  & .swiper-pagination-bullet:nth-child(2).swiper-pagination-bullet-active,
+  & .swiper-pagination-bullet:nth-child(2).swiper-pagination-bullet:hover {
     background-image: url("../img/nutrition_icon.svg");
     background-size: 102px auto;
-    background-position-y: 4px;
+    background-position-y: 2px;
 
     &:after {
       color: #E34964;
@@ -119,10 +124,11 @@
     }
   }
 
-  & .swiper-pagination-bullet:nth-child(3).swiper-pagination-bullet-active {
+  & .swiper-pagination-bullet:nth-child(3).swiper-pagination-bullet-active,
+  & .swiper-pagination-bullet:nth-child(3).swiper-pagination-bullet:hover {
     background-image: url("../img/motivation_icon.svg");
     background-size: 102px auto;
-    background-position-y: 4px;
+    background-position-y: 2px;
 
     &:after {
       color: #FFBC61;
@@ -130,10 +136,11 @@
     }
   }
 
-  & .swiper-pagination-bullet:nth-child(4).swiper-pagination-bullet-active {
+  & .swiper-pagination-bullet:nth-child(4).swiper-pagination-bullet-active,
+  & .swiper-pagination-bullet:nth-child(4).swiper-pagination-bullet:hover {
     background-image: url("../img/tracking_icon.svg");
     background-size: 102px auto;
-    background-position-y: 4px;
+    background-position-y: 2px;
 
     &:after {
       color: #58AAFB;
@@ -141,10 +148,11 @@
     }
   }
 
-  & .swiper-pagination-bullet:nth-child(5).swiper-pagination-bullet-active {
+  & .swiper-pagination-bullet:nth-child(5).swiper-pagination-bullet-active,
+  & .swiper-pagination-bullet:nth-child(5).swiper-pagination-bullet:hover {
     background-image: url("../img/guidance_icon.svg");
     background-size: 102px auto;
-    background-position-y: 4px;
+    background-position-y: 2px;
 
     &:after {
       color: #B065FC;
