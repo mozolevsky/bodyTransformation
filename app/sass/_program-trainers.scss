@@ -103,20 +103,13 @@
     line-height: 16px;
     text-align: center;
     color: $electric-blue;
-
-    &::before {
-      content: '';
-      position: absolute;
-      left: 0;
-      top: 0;
-      width: 16px;
-      height: 16px;
-      background: url('../img/program-play.svg') no-repeat center;
-      background-size: cover;
-    }
+    background-image: url('../img/program-play.svg');
+    background-repeat: no-repeat;
+    background-position: 0 center;
+    background-size: 16px 95%;
 
     &:hover {
-      cursor: po
+      cursor: pointer;
     }
   }
 
