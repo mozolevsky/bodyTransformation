@@ -11,8 +11,13 @@
   text-transform: uppercase;
   border-top: solid 1px rgba(151, 151, 151, 0.2);
 
+  /*-webkit-box-flex: 0;
+  -webkit-flex: none;
+  -ms-flex: none;
+  flex: none;*/
+
   &_ind {
-    height: 9vh!important;
+    //height: 9vh!important;
     padding: 5px 0 10px;
   }
 
@@ -31,7 +36,8 @@
 
 
   &__link {
-    margin-left: 40px;
+    margin-left: 20px;
+    margin-right: 20px;
     color: $pinkish-grey;
     @include trans();
   }
@@ -73,7 +79,8 @@
     }
 
     &__link {
-      margin-left: 20px;
+      margin-left: 10px;
+      margin-right: 10px;
       line-height: 20px;
     }
   }
