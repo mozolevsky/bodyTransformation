@@ -1,6 +1,6 @@
 "use strict";
 
-var app = new Vue({
+let app = new Vue({
     el: "#app",
     data: {
         formData: {
@@ -9,6 +9,8 @@ var app = new Vue({
             weight: '',
             weightUnitChecked: false,
             height: '',
+            feet: '',
+            inches: '',
             heightUnitChecked: false,
             age: '',
             name: '',
@@ -34,13 +36,13 @@ var app = new Vue({
             return !isNaN(value);
         },
         isEmail: function isEmail(email) {
-            var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+            let re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
             return re.test(email);
         },
         goToSecondStep: function goToSecondStep() {
-            var dataArr = [this.formData.weight, this.formData.height, this.formData.age];
-            var counter = 0;
-            var vm = this;
+            let dataArr = [this.formData.weight, this.formData.height, this.formData.age, this.formData.feet, this.formData.inches];
+            let counter = 0;
+            let vm = this;
 
             dataArr.forEach(function (item) {
                 if (item && vm.isNum(item)) {
@@ -50,10 +52,10 @@ var app = new Vue({
 
             console.log(counter);
 
-            if (counter == 3) {
+            if (counter >= 3) {
                 console.log('We can push the button');
                 this.formData.calcOverlay = true;
-                var self = this;
+                let self = this;
 
                 setTimeout(function () {
                     self.formData.calcOverlay = false;
@@ -75,6 +77,14 @@ var app = new Vue({
                 if (this.formData.age == '') {
                     this.formData.age = 'Enter numerical data';
                 }
+
+                if (this.formData.feet == '') {
+                    this.formData.feet = 'Enter data';
+                }
+
+                if (this.formData.inches == '') {
+                    this.formData.inches = 'Enter data';
+                }
             }
         },
         getWindowWidth: function getWindowWidth(event) {
@@ -86,6 +96,11 @@ var app = new Vue({
             return this.formData.weightUnitChecked ? 'kg' : 'lbs';
         },
         heightUnit: function heightUnit() {
+
+            if  (!this.formData.heightUnitChecked) {
+                console.log('display two fields');
+            }
+
             return this.formData.heightUnitChecked ? 'cm' : 'ft';
         },
         weightStyles: function weightStyles() {
@@ -98,6 +113,18 @@ var app = new Vue({
             return {
                 'calc-form__input_valid': this.formData.height && this.isNum(this.formData.height),
                 'calc-form__input_invalid': this.formData.height && !this.isNum(this.formData.height)
+            };
+        },
+        feetStyles: function heightStyles() {
+            return {
+                'calc-form__input_valid': this.formData.feet && this.isNum(this.formData.feet),
+                'calc-form__input_invalid': this.formData.feet && !this.isNum(this.formData.feet)
+            };
+        },
+        inchesStyles: function heightStyles() {
+            return {
+                'calc-form__input_valid': this.formData.inches && this.isNum(this.formData.inches),
+                'calc-form__input_invalid': this.formData.inches && !this.isNum(this.formData.inches)
             };
         },
         ageStyles: function ageStyles() {

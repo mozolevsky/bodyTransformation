@@ -104,12 +104,13 @@
 
   &__input-group {
     position: relative;
+    width: 361.3px;
   }
 
   &__input {
     position: relative;
-    padding: 16px 96px 17px 19px;
-    width: 361.3px;
+    padding: 16px 10px 17px 19px;
+    width: 250px;
     height: 54px;
     outline: none;
     border: none;
@@ -118,6 +119,18 @@
     background-position: -14px center;
     box-shadow: 0 1px 3px 0 $transparent, 0 1px 3px 0 rgba(0, 0, 0, 0.15);
     @include trans(0.5s);
+
+    &_long {
+      width: 360px;
+    }
+
+    &_short {
+      width: 117px;
+
+      &:first-child {
+        margin-right: 10px;
+      }
+    }
 
     &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
       opacity: 0.31;
@@ -329,15 +342,17 @@
   &__title {
     position: absolute;
     top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 440px;
+    left: 0;
+    width: 100%;
+    transform: translate(0, -50%);
     padding-right: 50px;
+    text-align:center;
     @include fontSH(34px, auto);
     color: #58637A;
     font-weight: bold;
 
     &:after {
+      position: absolute;
       overflow: hidden;
       display: inline-block;
       vertical-align: bottom;
@@ -449,7 +464,7 @@
     }
 
     &__input {
-      width: 361px;
+      /*width: 361px;*/
     }
   }
 
@@ -580,4 +595,9 @@
     }
   }
 
+  .calc-overlay {
+    &__title {
+      font-size: 18px;
+    }
+  }
 }

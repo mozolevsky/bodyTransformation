@@ -88,7 +88,27 @@
                               </div>
                               <div class="calc-form__area">
                                   <div class="calc-form__input-group">
-                                      <input class="calc-form__input" v-bind:class="heightStyles" v-model="formData.height" type="text" name="weight"  placeholder="Enter your height">
+                                      <input class="calc-form__input"
+                                             v-if="formData.heightUnitChecked"
+                                             v-bind:class="heightStyles"
+                                             v-model="formData.height"
+                                             type="text"
+                                             placeholder="Enter your height">
+
+                                       <div class="calc-form__input-ft-group">
+                                           <input class="calc-form__input calc-form__input_short"
+                                                  v-if="!formData.heightUnitChecked"
+                                                  v-bind:class="feetStyles"
+                                                  v-model="formData.feet"
+                                                  type="text"
+                                                  placeholder="Feet">
+                                           <input class="calc-form__input calc-form__input_short"
+                                                  v-if="!formData.heightUnitChecked"
+                                                  v-bind:class="inchesStyles"
+                                                  v-model="formData.inches"
+                                                  type="text"
+                                                  placeholder="Inches">
+                                       </div>
                                       <div class="calc-form__switch">
                                           <input type='checkbox' class='ios8-switch' id='checkbox_in' v-model="formData.heightUnitChecked">
                                           <label for='checkbox_in'>{{ heightUnit }}</label>
@@ -96,7 +116,7 @@
                                   </div>
                               </div>
                               <div class="calc-form__area">
-                                  <input class="calc-form__input" v-bind:class="ageStyles" v-model="formData.age" type="text" name="weight"  placeholder="Enter your age">
+                                  <input class="calc-form__input calc-form__input_long" v-bind:class="ageStyles" v-model="formData.age" type="text" name="weight"  placeholder="Enter your age">
                               </div>
                               <div class="calc-form__area">
                                   <button class="calc-form__btn" @click.prevent="goToSecondStep()">Calculate</button>
