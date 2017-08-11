@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/normalize.min.css">
     <link rel="stylesheet" href="libs/bootstrap/dist/css/bootstrap.min.css">
     <link href="libs/mmenu/jquery.mmenu.css" type="text/css" rel="stylesheet" />
-    <link rel="stylesheet" href="css/main.min.css">
+    <link rel="stylesheet" href="css/main.css">
     <script src="https://use.typekit.net/pca4zir.js"></script>
     <script>try{Typekit.load({ async: true });}catch(e){}</script>
 </head>
@@ -70,7 +70,6 @@
                                       <input class="calc-form__checkbox" id="checkbox_male" type="radio" name="gender" value="Male">
                                       <label class="calc-form__checkbox-label" for="checkbox_male"><span></span>Male</label>
                                   </div>
-
                                   <div class="calc-form__checkbox-wrapper">
                                       <input class="calc-form__checkbox" id="checkbox_female" type="radio" name="gender" value="Female">
                                       <label class="calc-form__checkbox-label" for="checkbox_female"><span></span>Female</label>
@@ -78,10 +77,16 @@
                               </div>
                               <div class="calc-form__area">
                                   <div class="calc-form__input-group">
-                                      <input class="calc-form__input" v-bind:class="weightStyles" v-model="formData.weight"
-                                             type="text" name="weight" placeholder="Enter your weight">
+                                      <input class="calc-form__input"
+                                             v-bind:class="weightStyles"
+                                             v-model="formData.weight"
+                                             type="text" name="weight"
+                                             placeholder="Enter your weight">
                                       <div class="calc-form__switch">
-                                          <input type='checkbox' class='ios8-switch' id='checkbox_lbs' v-model="formData.weightUnitChecked">
+                                          <input type='checkbox'
+                                                 class='ios8-switch'
+                                                 id='checkbox_lbs'
+                                                 v-model="formData.weightUnitChecked">
                                           <label for='checkbox_lbs'>{{ weightUnit }}</label>
                                       </div>
                                   </div>
@@ -116,7 +121,10 @@
                                   </div>
                               </div>
                               <div class="calc-form__area">
-                                  <input class="calc-form__input calc-form__input_long" v-bind:class="ageStyles" v-model="formData.age" type="text" name="weight"  placeholder="Enter your age">
+                                  <input class="calc-form__input calc-form__input_long"
+                                         v-bind:class="ageStyles" v-model="formData.age"
+                                         type="text" name="weight"
+                                         placeholder="Enter your age">
                               </div>
                               <div class="calc-form__area">
                                   <button class="calc-form__btn" @click.prevent="goToSecondStep()">Calculate</button>

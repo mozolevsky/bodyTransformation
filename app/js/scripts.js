@@ -92,10 +92,10 @@ let app = new Vue({
         }
     },
     computed: {
-        weightUnit: function weightUnit() {
+        weightUnit() {
             return this.formData.weightUnitChecked ? 'kg' : 'lbs';
         },
-        heightUnit: function heightUnit() {
+        heightUnit() {
 
             if  (!this.formData.heightUnitChecked) {
                 console.log('display two fields');
@@ -103,43 +103,43 @@ let app = new Vue({
 
             return this.formData.heightUnitChecked ? 'cm' : 'ft';
         },
-        weightStyles: function weightStyles() {
+        weightStyles() {
             return {
                 'calc-form__input_valid': this.formData.weight && this.isNum(this.formData.weight),
                 'calc-form__input_invalid': this.formData.weight && !this.isNum(this.formData.weight)
             };
         },
-        heightStyles: function heightStyles() {
+        heightStyles() {
             return {
                 'calc-form__input_valid': this.formData.height && this.isNum(this.formData.height),
                 'calc-form__input_invalid': this.formData.height && !this.isNum(this.formData.height)
             };
         },
-        feetStyles: function heightStyles() {
+        feetStyles() {
             return {
                 'calc-form__input_valid': this.formData.feet && this.isNum(this.formData.feet),
                 'calc-form__input_invalid': this.formData.feet && !this.isNum(this.formData.feet)
             };
         },
-        inchesStyles: function heightStyles() {
+        inchesStyles() {
             return {
                 'calc-form__input_valid': this.formData.inches && this.isNum(this.formData.inches),
                 'calc-form__input_invalid': this.formData.inches && !this.isNum(this.formData.inches)
             };
         },
-        ageStyles: function ageStyles() {
+        ageStyles() {
             return {
                 'calc-form__input_valid': this.formData.age && this.isNum(this.formData.age),
                 'calc-form__input_invalid': this.formData.age && !this.isNum(this.formData.age)
             };
         },
-        nameStyles: function nameStyles() {
+        nameStyles() {
             return {
                 'calc-form__input_valid': this.formData.name && this.isNum(this.formData.name),
                 'calc-form__input_invalid': this.formData.name && !this.isNum(this.formData.name)
             };
         },
-        emailStyles: function emailStyles() {
+        emailStyles() {
             return {
                 'calc-form__input_valid': this.formData.email && this.isEmail(this.formData.email),
                 'calc-form__input_invalid': this.formData.email && !this.isEmail(this.formData.email)
