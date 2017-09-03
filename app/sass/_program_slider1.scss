@@ -278,27 +278,32 @@
       }
     }
 
-    & .swiper-pagination-bullet:nth-child(1).swiper-pagination-bullet-active {
+    & .swiper-pagination-bullet:nth-child(1).swiper-pagination-bullet-active,
+    & .swiper-pagination-bullet:nth-child(1).swiper-pagination-bullet:hover {
       background-size: 60px auto;
       background-position-y: 4px;
     }
 
-    & .swiper-pagination-bullet:nth-child(2).swiper-pagination-bullet-active {
+    & .swiper-pagination-bullet:nth-child(2).swiper-pagination-bullet-active,
+    & .swiper-pagination-bullet:nth-child(2).swiper-pagination-bullet:hover {
       background-size: 60px auto;
       background-position-y: 4px;
     }
 
-    & .swiper-pagination-bullet:nth-child(3).swiper-pagination-bullet-active {
+    & .swiper-pagination-bullet:nth-child(3).swiper-pagination-bullet-active,
+    & .swiper-pagination-bullet:nth-child(3).swiper-pagination-bullet:hover{
       background-size: 60px auto;
       background-position-y: 4px;
     }
 
-    & .swiper-pagination-bullet:nth-child(4).swiper-pagination-bullet-active {
+    & .swiper-pagination-bullet:nth-child(4).swiper-pagination-bullet-active,
+    & .swiper-pagination-bullet:nth-child(4).swiper-pagination-bullet:hover {
       background-size: 60px auto;
       background-position-y: 4px;
     }
 
-    & .swiper-pagination-bullet:nth-child(5).swiper-pagination-bullet-active {
+    & .swiper-pagination-bullet:nth-child(5).swiper-pagination-bullet-active,
+    & .swiper-pagination-bullet:nth-child(5).swiper-pagination-bullet:hover {
       background-image: url("../img/guidance_icon.svg");
       background-size: 60px auto;
       background-position-y: 4px;
